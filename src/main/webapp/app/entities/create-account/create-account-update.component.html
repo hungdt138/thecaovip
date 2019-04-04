@@ -1,0 +1,250 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+    <div class="card">
+        <div class="card-body">
+            <h2 id="myUserLabel">
+                {{user?.id ? 'Cập nhật thông tin đại lý' : 'Tạo mới đại lý'}}
+            </h2>
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <label class="form-control-label">Tên đăng nhập</label>
+                    <input type="text" class="form-control" name="login" #loginInput="ngModel"
+                           [(ngModel)]="user.login" required minlength="1" maxlength="50" pattern="^[_.@A-Za-z0-9-]*$">
+
+                    <div *ngIf="loginInput.dirty && loginInput.invalid">
+                        <small class="form-text text-danger"
+                               *ngIf="loginInput.errors.required">
+                            Tên đăng nhập không được bỏ trống
+                        </small>
+
+                        <small class="form-text text-danger"
+                               *ngIf="loginInput.errors.maxlength"
+                        >
+                            Tên đăng nhập không dài quá 50 ký tự
+                        </small>
+
+                        <small class="form-text text-danger"
+                               *ngIf="loginInput.errors.pattern">
+                            Tên đăng nhập chỉ bao gồm số và chữ
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group col-md-4">
+                    <label class="form-control-label" for="password">Mật khẩu</label>
+                    <input type="password" class="form-control" id="password" name="password" #password="ngModel"
+                           [(ngModel)]="user.password" minlength=4 maxlength=50 required [disabled]="user.id">
+                    <div *ngIf="password.dirty && password.invalid">
+                        <small class="form-text text-danger" *ngIf="password.errors.required"
+                        >
+                            Mật khẩu không được bỏ trống.
+                        </small>
+                        <small class="form-text text-danger" *ngIf="password.errors.minlength"
+                        >
+                            Mật khẩu có ít nhất 4 kí tự.
+                        </small>
+                        <small class="form-text text-danger" *ngIf="password.errors.maxlength"
+                        >
+                            Mật khẩu không được dài quá 50 kí tự.
+                        </small>
+                    </div>
+                    <jhi-password-strength-bar [passwordToCheck]="user?.password"></jhi-password-strength-bar>
+                </div>
+                <div class="form-group col-md-4">
+                    <label class="form-control-label" for="confirmPassword">Xác nhận mật khẩu</label>
+                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"
+                           [(ngModel)]="confirmPassword" minlength=4 maxlength=50 required [disabled]="user.id">
+                    <div *ngIf="confirmPassword && user.password && confirmPassword !== user.password" class="form-text text-danger">
+                        Mật khẩu không khớp
+                    </div>
+                </div>
+                <div class="form-group col-md-4">
+                    <label class="form-control-label">Họ và tên</label>
+                    <input type="text" class="form-control" name="firstName" #firstNameInput="ngModel"
+                           [(ngModel)]="user.fullName" maxlength="255" required>
+
+                    <div *ngIf="firstNameInput.dirty && firstNameInput.invalid">
+                        <small class="form-text text-danger"
+                               *ngIf="firstNameInput.errors.required">
+                            Họ và tên không được bỏ trống
+                        </small>
+                        <small class="form-text text-danger"
+                               *ngIf="firstNameInput.errors.maxlength"
+                        >
+                            Họ tên không dài quá 255 kí tự
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group col-md-4">
+                    <label>Số điện thoại</label>
+                    <input type="text" class="form-control" name="phoneNumber" #phoneNumberInput="ngModel"
+                           [(ngModel)]="user.phoneNumber" maxlength="12" required>
+
+                    <div *ngIf="phoneNumberInput.dirty && phoneNumberInput.invalid">
+                        <small class="form-text text-danger"
+                               *ngIf="phoneNumberInput.errors.required">
+                            Số điện thoại không được bỏ trống
+                        </small>
+                        <small class="form-text text-danger"
+                               *ngIf="phoneNumberInput.errors.maxlength">
+                            Số điện thoại không dài quá 12 ký ự
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card m-t-20">
+        <div class="card-body">
+            <h2>Chiếu khấu Viettel</h2>
+            <div class="row">
+                <div class="form-group col-lg-6">
+                    <label class="form-control-label" for="a">Trả trước</label>
+                    <div class="input-group mb-3">
+                        <input type="number" class="form-control" name="feePercentLv1" id="a"
+                               [(ngModel)]="user.feePercentLv1" min="0" jhiMin="1" max="100" jhiMax="100" required/>
+                        <div class="input-group-append">
+                            <span class="input-group-text">%</span>
+                        </div>
+                    </div>
+
+                    <div [hidden]="!(editForm.controls.feePercentLv1?.dirty && editForm.controls.feePercentLv1?.invalid)">
+                        <small class="form-text text-danger"
+                               *ngIf="!editForm.controls.feePercentLv1?.errors?.required">
+                            Trường nay bắt buộc nhập.
+                        </small>
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.feePercentLv1?.errors?.min">
+                            Tỷ lệ chiết khấu phải lớn hơn 0
+                        </small>
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.feePercentLv1?.errors?.max">
+                            Tỷ lệ chiết khấu phải nhỏ hơn 100
+                        </small>
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.feePercentLv1?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group col-lg-6">
+                    <label class="form-control-label" for="b">Trả sau</label>
+                    <div class="input-group mb-3">
+                        <input type="number" class="form-control" name="feePercentLv2" id="b"
+                               [(ngModel)]="user.feePercentLv2" min="0" jhiMin="1" max="100" jhiMax="100" required/>
+                        <div class="input-group-append">
+                            <span class="input-group-text" >%</span>
+                        </div>
+                    </div>
+
+                    <div [hidden]="!(editForm.controls.feePercentLv2?.dirty && editForm.controls.feePercentLv2?.invalid)">
+                        <small class="form-text text-danger"
+                               *ngIf="!editForm.controls.feePercentLv2?.errors?.required">
+                            Trường nay bắt buộc nhập.
+                        </small>
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.feePercentLv2?.errors?.min">
+                            Tỷ lệ chiết khấu phải lớn hơn 0
+                        </small>
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.feePercentLv2?.errors?.max">
+                            Tỷ lệ chiết khấu phải nhỏ hơn 100
+                        </small>
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.feePercentLv2?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-lg-6">
+                    <label class="form-control-label" for="c">Trả trước trong cước</label>
+                    <div class="input-group mb-3">
+                        <input type="number" class="form-control" name="feePercentLv1Vina" id="c"
+                               [(ngModel)]="user.feePercentLv1b" min="0" jhiMin="1" max="100" jhiMax="100" required/>
+                        <div class="input-group-append">
+                            <span class="input-group-text" >%</span>
+                        </div>
+                    </div>
+
+                    <div [hidden]="!(editForm.controls.feePercentLv1Vina?.dirty && editForm.controls.feePercentLv1Vina?.invalid)">
+                        <small class="form-text text-danger"
+                               *ngIf="!editForm.controls.feePercentLv1Vina?.errors?.required">
+                            Trường nay bắt buộc nhập.
+                        </small>
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.feePercentLv1Vina?.errors?.min">
+                            Tỷ lệ chiết khấu phải lớn hơn 0
+                        </small>
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.feePercentLv1Vina?.errors?.max">
+                            Tỷ lệ chiết khấu phải nhỏ hơn 100
+                        </small>
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.feePercentLv1Vina?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group col-lg-6">
+                    <label class="form-control-label" for="e">Trả sau trong cước</label>
+                    <div class="input-group mb-3">
+                        <input type="number" class="form-control" name="feePercentLv2Vina" id="e"
+                               [(ngModel)]="user.feePercentLv2b" min="0" jhiMin="1" max="100" jhiMax="100" required/>
+                        <div class="input-group-append">
+                            <span class="input-group-text" >%</span>
+                        </div>
+                    </div>
+
+                    <div [hidden]="!(editForm.controls.feePercentLv2Vina?.dirty && editForm.controls.feePercentLv2Vina?.invalid)">
+                        <small class="form-text text-danger"
+                               *ngIf="!editForm.controls.feePercentLv2Vina?.errors?.required">
+                            Trường nay bắt buộc nhập.
+                        </small>
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.feePercentLv2Vina?.errors?.min">
+                            Tỷ lệ chiết khấu phải lớn hơn 0
+                        </small>
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.feePercentLv2Vina?.errors?.max">
+                            Tỷ lệ chiết khấu phải nhỏ hơn 100
+                        </small>
+                        <small class="form-text text-danger"
+                               [hidden]="!editForm.controls.feePercentLv2Vina?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button type="button" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Hủy</span>
+                </button>
+                <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>{{user?.id ? 'Cập nhật' : 'Tạo đại lý'}}</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
+<swal #errorSwal
+      title="Có lỗi sảy ra"
+      type="error"
+      [showConfirmButton]="false"
+      [showCancelButton]="true">
+    <div *swalPartial class="alert alert-info">
+        <strong>{{ errorMessage }}</strong>
+    </div>
+</swal>
+
+<swal #success
+      title="Chúc mừng bạn"
+      type="success"
+      [showConfirmButton]="false"
+      [showCancelButton]="true"
+      cancelButtonText="Đóng"
+      (cancel)="previousState()">
+    <div *swalPartial class="alert alert-success">
+        <strong>Tài khoản đại lý của bạn đã được {{user?.id ? 'cập nhật' : 'tạo mới'}} thành công</strong>
+    </div>
+</swal>

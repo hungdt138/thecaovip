@@ -1,0 +1,46 @@
+<div class="card">
+    <div class="card-header">
+        <h3 id="page-heading">
+            <span>Cài đặt hệ thống</span>
+            <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-system" [routerLink]="['./new']">
+                <fa-icon [icon]="'plus'"></fa-icon>
+                <span >
+                Tạo mới cài đặt hệ thống
+                </span>
+            </button>
+        </h3>
+    </div>
+    <div *ngIf="systems">
+        <table class="table">
+            <thead>
+            <tr >
+            <th ><span>Ngày trong cước từ</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th ><span>Ngày trong cước đến</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th ><span>Chiết khấu đại lý cấp 1</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th ><span>Chiết khấu đại lý cấp 2</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th ><span>Ngày khuyến mãi VIETTEL</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th ><span>Ngày khuyến mãi VINA</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th ><span>Ngày khuyến mãi MOBI</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th ><span>Khóa nhận đơn VIETTEL</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th ><span>Khóa nhận đơn MOBI</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th ><span>Khóa nhận đơn VINA</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{systems.highFreeFrom}}</td>
+                <td>{{systems.hignFeeTo}}</td>
+                <td>{{systems.feePercentLv1 + '%'}}</td>
+                <td>{{systems.feePercentLv2 + '%'}}</td>
+                <td>{{systems.viettelPromotionDate}}</td>
+                <td>{{systems.vinaPromotionDate}}</td>
+                <td>{{systems.mobiPromotionDate}}</td>
+                <td>{{systems.lockViettel ? 'Khóa nhận đơn' : 'Tiếp tực nhận đơn'}}</td>
+                <td>{{systems.lockVina ? 'Khóa nhận đơn' : 'Tiếp tực nhận đơn'}}</td>
+                <td>{{systems.lockMobi ? 'Khóa nhận đơn' : 'Tiếp tực nhận đơn'}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

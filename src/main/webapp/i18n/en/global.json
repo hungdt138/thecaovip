@@ -1,0 +1,294 @@
+{
+    "global": {
+        "title": "Cicb",
+        "browsehappy": "You are using an <strong>outdated</strong> browser. Please <a href=\"http://browsehappy.com/?locale=en\">upgrade your browser</a> to improve your experience.",
+        "menu": {
+            "home": "Home",
+            "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
+            "entities": {
+                "main": "Entities",
+                "customer": "Customer",
+                "bank": "Bank",
+                "cardPack": "Card Pack",
+                "creditOfficer": "Credit Officer",
+                "demand": "Demand",
+                "groups": "Groups",
+                "groupAuth": "Group Auth",
+                "loanPack": "Loan Pack",
+                "loanPackDtl": "Loan Pack Dtl",
+                "pairing": "Pairing",
+                "area": "Area",
+                "advertisement": "Advertisement",
+                "report": "Report",
+                "utilities": "utilities",
+                "testDate": "Test Date",
+                "interestRate": "Interest Rate",
+                "customerResponse": "Customer Response",
+                "advisory": "Tư vấn",
+                "order": "Order",
+                "orderads": "Orderads",
+                "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
+            },
+            "account": {
+                "main": "Account",
+                "settings": "Settings",
+                "password": "Password",
+                "sessions": "Sessions",
+                "login": "Sign in",
+                "logout": "Sign out",
+                "register": "Register",
+                "profile": "Profile",
+                "loanProfile": "Loan Profile",
+                "cardProfile": "Card Profile",
+                "report": "Reposrt",
+                "professional": "Professional",
+                "loan": "Loan",
+                "card": "Card",
+                "loanDemandList": "Danh sách nhu cầu vay",
+                "loanDemandAds": "Nhu cầu vay theo tin QC"
+            },
+            "admin": {
+                "main": "Administration",
+                "userManagement": "User management",
+                "tracker": "User tracker",
+                "metrics": "Metrics",
+                "health": "Health",
+                "configuration": "Configuration",
+                "logs": "Logs",
+                "audits": "Audits",
+                "apidocs": "API",
+                "database": "Database",
+                "userSystem": "Người dùng hệ thống",
+                "userOfCicb": "DS người dùng HT của CICB",
+                "userOfTctd": "DS người dùng HT của TCTD",
+                "userCustomer": "DS tài khoản khách hàng vay",
+                "jhipster-needle-menu-add-admin-element": "JHipster will add additional menu entries here (do not translate!)"
+            },
+            "language": "Language",
+            "notification": {
+                "main": "Notifications",
+                "viewAll": "Xem tất cả",
+                "allRead": "Đã đọc tất cả"
+            }
+        },
+        "form": {
+            "username": "Tên tài khoản",
+            "username.placeholder": "Nhập tên tài khoản của bạn",
+            "customername": "Họ và tên",
+            "customername.placeholder": "Nhập tên của bạn",
+            "phonenumber": "Số điện thoại",
+            "phonenumber.placeholder": "Nhập số điện thoại của bạn",
+            "verifycode": "Mã OTP",
+            "verifycode.placeholder": "Nhập mã OTP",
+            "newpassword": "mật khẩu",
+            "newpassword.placeholder": "Nhập mật khẩu",
+            "confirmpassword": "Xác nhận mật khẩu",
+            "confirmpassword.placeholder": "Nhập lại mật khẩu",
+            "email": "Email",
+            "email.placeholder": "Nhập email của bạn",
+            "fullName": "Họ tên",
+            "fullName.placeholder": "Nhập họ tên",
+            "phoneNumber": "Số điện thoại",
+            "phoneNumber.placeholder": "Nhập số điện thoại của bạn",
+            "currentpassword": "Mật khẩu hiện tại",
+            "currentpassword.placeholder": "Nhập mật khẩu hiện tại của bạn",
+            "identification": "Số CMND / CCCD",
+            "identification.placeholder": "Nhập số CMND hoặc số thẻ CCCD của bạn",
+            "otherId": "Số CMND khác (nếu có)",
+            "dateOfBirth": "Ngày sinh",
+            "province": "Tỉnh thành đang sinh sống",
+            "district": "Quận / Huyện",
+            "commune": "Phường/Xã",
+            "address": "Địa chỉ",
+            "address.placeholder": "Nhập số nhà, tên đường, tổ/xóm, khu phố/thôn",
+            "img": "Ảnh CMND / CCCD",
+            "img.delete": "Xóa",
+            "img.add": "Thêm",
+            "caution": "Lưu ý",
+            "caution.title": " Khách hàng vui lòng đính kèm 3 ảnh CMT theo định dạng *png, *jpg, *jpeg , bao gồm:",
+            "caution.frontImg": " Ảnh mặt trước chứng minh thư ",
+            "caution.backImg": " Ảnh mặt sau chứng minh thư ",
+            "caution.imgWithUser": " Ảnh chân dung khách hàng có kèm chứng minh thư"
+        },
+        "messages": {
+            "info": {
+                "authenticated": {
+                    "prefix": "If you want to ",
+                    "link": "sign in",
+                    "suffix": ", you can try the default accounts:<br/>- Administrator (login=\"admin\" and password=\"admin\") <br/>- User (login=\"user\" and password=\"user\")."
+                },
+                "register": {
+                    "noaccount": "You don't have an account yet?",
+                    "link": "Register a new account"
+                }
+            },
+            "error": {
+                "passwordDontMatch": "The password and its confirmation do not match!",
+                "otpCodeNull": "Chưa nhập mã OTP",
+                "getOtpTimeOut": "Bạn gửi mã OTP quá nhiều lần"
+            },
+            "validate": {
+                "newpassword": {
+                    "required": "Your password is required.",
+                    "minlength": "Your password is required to be at least 6 characters.",
+                    "maxlength": "Your password cannot be longer than 50 characters.",
+                    "strength": "Password strength:"
+                },
+                "confirmpassword": {
+                    "required": "Your confirmation password is required.",
+                    "minlength": "Your confirmation password is required to be at least 6 characters.",
+                    "maxlength": "Your confirmation password cannot be longer than 50 characters."
+                },
+                "email": {
+                    "required": "Your email is required.",
+                    "invalid": "Your email is invalid.",
+                    "minlength": "Your email is required to be at least 5 characters.",
+                    "maxlength": "Your email cannot be longer than 50 characters."
+                },
+                "phoneNumber": {
+                    "required": "Your phone number is required.",
+                    "invalid": "Your phone number is invalid.",
+                    "minlength": "Your phone number is required to be at least 10 characters.",
+                    "maxlength": "Your phone number cannot be longer than 12 characters.",
+                    "pattern": "Your phone number can only contain letters and digits."
+                },
+                "fullName": {
+                    "required": "This field is required."
+                },
+                "identification": {
+                    "required": "This field is required.",
+                    "minlength": "Your ID is required to be at least 9 characters.",
+                    "maxlength": "Your ID cannot be longer than 12 characters.",
+                    "pattern": "Your ID can only contain letters and digits."
+                },
+                "otpCode": {
+                    "required": "OTP is required.",
+                    "pattern": "OTP invalid"
+                }
+            }
+        },
+        "field": {
+            "id": "ID"
+        },
+        "ribbon": {
+            "dev":"Development"
+        },
+        "item-count": "Showing {{first}} - {{second}} of {{total}} items.",
+        "navBar": {
+            "login": "Đăng nhập",
+            "profile": "Tra cứu hồ sơ",
+            "bank": "Tổ chức tín dụng",
+            "openCard": "Mở thẻ cá nhân",
+            "openCardEnterprise": "Mở thẻ doanh nghiệp",
+            "compareInterestRate": "So sánh lãi suất",
+            "borrow": "Vay vốn",
+            "consultants": "CHuyên gia tư vấn",
+            "loanPack": "Gói vay",
+            "advisory": "Tư vấn ngay",
+            "home": "Trang chủ",
+            "card": {
+                "service": "Dịch vụ thẻ",
+                "credit": "Thẻ tín dụng",
+                "creditPersonal": "Thẻ tín dụng cá nhân",
+                "creditEnterprise": "Thẻ tín dụng doanh nghiệp",
+                "debit": "Thẻ ghi nợ",
+                "debitPersonal": "Thẻ ghi nợ cá nhân",
+                "debitEnterprise": "Thẻ ghi nợ doanh nghiệp"
+            }
+        }
+    },
+    "entity": {
+        "action": {
+            "addblob": "Add blob",
+            "addimage": "Add image",
+            "back": "Back",
+            "cancel": "Cancel",
+            "delete": "Delete",
+            "edit": "Edit",
+            "open": "Open",
+            "save": "Save",
+            "view": "View",
+            "search": "Search",
+            "authorization": "Authorization",
+            "close": "Close",
+            "exportExcel": "Export excel",
+            "visible": "Visible",
+            "getOtpCode": "Get OTP code",
+            "reSendOtpCode": "Re send",
+            "choose": "Choose",
+            "deleteAll": "Delete all selected",
+            "confirm": "Đồng ý",
+            "denied": "Từ chối",
+            "cause": "Reasons for refusal",
+            "yes": "Yes"
+        },
+        "detail": {
+            "field": "Field",
+            "value": "Value"
+        },
+        "delete": {
+            "title": "Confirm delete operation"
+        },
+        "validation": {
+            "required": "This field is required.",
+            "minlength": "This field is required to be at least {{ min }} characters.",
+            "maxlength": "This field cannot be longer than {{ max }} characters.",
+            "min": "This field should be at least {{ min }}.",
+            "max": "This field cannot be more than {{ max }}.",
+            "minbytes": "This field should be at least {{ min }} bytes.",
+            "maxbytes": "This field cannot be more than {{ max }} bytes.",
+            "pattern": "This field should follow pattern for {{ pattern }}.",
+            "number": "This field should be a number.",
+            "datetimelocal": "This field should be a date and time.",
+            "patternLogin": "This field can only contain letters, digits and e-mail addresses.",
+            "email": "Email invalid"
+        }
+    },
+    "error": {
+        "internalServerError": "Internal server error",
+        "server.not.reachable": "Server not reachable",
+        "url.not.found": "Not found",
+        "NotNull": "Field {{ fieldName }} cannot be empty!",
+        "Size": "Field {{ fieldName }} does not meet min/max size requirements!",
+        "userexists": "Login name already used!",
+        "emailexists": "Email is already in use!",
+        "idexists": "A new {{ entityName }} cannot already have an ID",
+        "idnull": "Invalid ID",
+        "dataNull": "Cannot find data",
+        "permissionDenied": "Permission denied"
+    },
+    "footer": "This is your footer",
+    "alert": {
+        "title": "Thông báo",
+        "error": {
+            "systemError": "Có lỗi hệ thống",
+            "wrongOtp": "Mã Otp không đúng",
+            "otpExpired": "Mã Otp đã hết hạn"
+        }
+    },
+    "liveChat": {
+        "title": "Support",
+        "chatNow": "Chat now",
+        "myName": "You",
+        "type": "Write message",
+        "recent": "Recent",
+        "allMsg": "All",
+        "unread": "Unread",
+        "send": "Send"
+    },
+    "wrongInfo": {
+        "title1": "Sai thông tin",
+        "title2": "Thông tin tài khoản không khớp với số điện thoại",
+        "forget": "Tìm lại mật khẩu",
+        "login": "Tôi muốn đăng nhập"
+    },
+    "pageTitle": {
+        "creditPriority": "Danh sách gói dịch vụ tín dụng",
+        "creditAds": "Danh sách gói quảng cáo tín dụng",
+        "adsList": "Danh sách đăng ký dịch vụ quảng cáo",
+        "categoryCreditPriority": "Gói ưu tiên tín dụng",
+        "categoryAds": "Gói quảng cáo",
+        "cardDemand": "Nhu cầu thẻ",
+        "newUser": "Thêm tài khoản"
+    }
+}

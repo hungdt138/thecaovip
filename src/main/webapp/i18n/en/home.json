@@ -1,0 +1,84 @@
+{
+    "home": {
+        "title": "NGÂN HÀNG NHÀ NƯỚC ĐÓN NHẬN HUÂN CHƯƠNG LẦN THỨ 3",
+        "subtitle": "Thủ tướng Nguyễn Xuân Phúc giao nhiệm vụ cho ngân hàng nhà nước\ntriển khai dịch vụ tư vấn tín dụng phổ biến tới toàn dân",
+        "logged": {
+            "message": "Bạn đang đăng nhập bằng tài khoản \"{{username}}\"."
+        },
+        "searchTitle": "Tìm nhanh gói vay. Nhận ngay kết quả",
+        "searchPlaceHolder": "Thông tin vay",
+        "register": "Đăng ký vay ngay",
+        "github": "GitHub",
+        "locationSearch": {
+            "search": "Tìm kiếm thông tin",
+            "byLocation": "Theo khu vực",
+            "description": "Các tổ chức tín dụng, chuyên viên tín dụng, các khoản vay"
+        },
+        "landscape1": {
+            "title": "NGÂN HÀNG NHÀ NƯỚC VIỆT NAM",
+            "subtitle": "Trung tâm thông tin tín dụng quốc gia Việt Nam",
+            "card1": "Thẻ tín dụng",
+            "card2": "Vay mua, sửa chữa nhà đất",
+            "card3": "Vay mua ô tô",
+            "card4": "Vay tiêu dùng",
+            "card5": "Vay thế chấp",
+            "card6": "Vay tín chấp cá nhân",
+            "card7": "Vay cá nhân XS/KD",
+            "card8": "Vay sản xuất nông nghiệp"
+        },
+        "footer": {
+            "title": "Thông tin liên hệ",
+            "headquarters": "Trụ sở chính: Số 10 Quang Trung, Quận Hà Đông, Hà Nội, Việt Nam",
+            "brand": "Chi nhánh: Lầu 1, Số 68 Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh, Việt Nam",
+            "phone": "Điện thoại hỗ trợ: 19001082"
+        },
+        "text1": "Vay tiêu dùng",
+        "text2": "Vay mua ô tô",
+        "text3": "Vay kinh doanh",
+        "text4": "Vay bất động sản",
+        "text5": "Vay đặc thù",
+        "text6": "Vay ngắn hạn",
+        "text7": "Vay trung dài hạn",
+        "text8": "Tài trợ thương mại",
+        "text10": "Vay khác",
+        "text9": "MB hợp tác cùng vingroup đưa ra chính sách cho vay nặng lãi với cá nhân",
+        "chooseConsultants": "LỰA CHỌN TƯ VẤN VIÊN",
+        "send": "GỬI YÊU CẦU TƯ VẤN",
+        "bankNews": "Tin tức tài chính ngân hàng - ngân hàng",
+        "more": "Xem chi tiết",
+        "showMore": "Xem thêm",
+        "packageHot": "Các gói vay nổi bật",
+        "province": "Tỉnh/Thành phố",
+        "district": "Quận/huyện",
+        "loanRegister": {
+            "amount": "Số tiền cần vay",
+            "period": "Thời gian vay",
+            "product": "Sản phẩm vay",
+            "type1": "Loại hình",
+            "type2": "Hình thức vay",
+            "term": "Điều khoản",
+            "register": "Đăng ký vay",
+            "registerNow": "Đăng ký ngay",
+            "fullName": "Họ và tên",
+            "phoneNumber": "Số điện thoại",
+            "mortgage": "Thế chấp",
+            "mortgage1": "Tín chấp",
+            "month": "Tháng",
+            "identification": "CMND/ CCCD",
+            "otherIdentification": "Số CMND khác",
+            "customerTitle": "Thông tin cá nhân",
+            "otp": {
+                "title1": "Nhập mã xác nhận",
+                "title2": "Vui lòng nhập mã xác nhận để khởi tạo khoản vay. Mã xác nhận đã được gửi tới số điện thoại",
+                "label": "Nhập mã xác nhận",
+                "placeholder": "Nhập mã xác nhận gồm 6 chữ số",
+                "next": "Tiếp tục"
+            }
+        },
+        "confirm.title": "Bạn đã đăng ký thành công",
+        "confirm.success": "Tổ chức tín dụng sẽ liên hệ hỗ trợ bạn trong thời gian sớm nhất!",
+        "confirm.error": "Mã OTP không hợp lệ, vui lòng thử lại!",
+        "code404": "Tôi không nhận được mã,",
+        "resend": "gửi lại ngay"
+    }
+}

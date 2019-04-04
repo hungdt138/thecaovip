@@ -1,0 +1,37 @@
+<form name="deleteForm" (ngSubmit)="confirmDelete(bill.id)">
+    <div class="modal-header">
+        <h4 class="modal-title">Xác nhận xóa đơn hàng</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <p></p>
+        <p id="jhi-delete-bill-heading">
+            Đơn hàng <strong><span class="red">{{bill.name}}</span></strong> của bạn đã được nạp
+            <strong><span class="red">{{(bill.chargedAmount ? (bill.chargedAmount | currency:'VND':'') : 0) + '/' + (bill.amount | currency:'VND':'')}} VNĐ</span></strong>
+        </p>
+        <p>
+            Bạn có chắc chắn muốn xóa đơn hàng này không?
+        </p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Bỏ qua</span>
+        </button>
+        <button id="jhi-confirm-delete-bill" type="submit" class="btn btn-danger">
+            <fa-icon [icon]="'times'"></fa-icon>&nbsp;<span>Tôi chắc chắn</span>
+        </button>
+    </div>
+</form>
+
+<swal #success
+      title="Chúc mừng bạn"
+      type="success"
+      [showConfirmButton]="false"
+      [showCancelButton]="true"
+      cancelButtonText="Đóng"
+      (cancel)="activeModal.dismiss(true);">
+    <div *swalPartial class="alert alert-success">
+        <strong>Bạn đã hủy đơn hàng thành công!</strong>
+    </div>
+</swal>

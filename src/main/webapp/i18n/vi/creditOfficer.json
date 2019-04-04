@@ -1,0 +1,57 @@
+{
+    "cicbApp": {
+        "creditOfficer" : {
+            "home": {
+                "title": "Danh Sách Cán Bộ Tín Dụng",
+                "createLabel": "Thêm Mới Một Cán Bộ Tín Dụng",
+                "createOrEditLabel": "Thêm Mới Hoặc Cập Nhật Cán bộ Tín Dụng"
+            },
+            "created": "Thêm mới cán bộ tín dụng {{ param }} thành công",
+            "updated": "Cập nhật cán bộ tín dụng {{ param }} thành công",
+            "deleted": "Xóa cán bộ tín dụng {{ param }} thành công",
+            "delete": {
+                "question": "Bạn có chắc là muốn xóa cán bộ tín dụng {{ id }}?"
+            },
+            "detail": {
+                "title": "Cán Bộ Tín Dụng"
+            },
+            "phoneNumber": "Số Điện Thoại",
+            "fullName": "Họ Tên",
+            "gender": "Giới Tính",
+            "status": "Trạng Thái",
+            "bank": "Ngân Hàng",
+            "female": "Nữ",
+            "male": "Nam",
+            "search": "Tìm kiếm",
+            "error": {
+                "deleteError01": "Không xóa được Cán bộ tín dụng vì đã được sử dụng bởi Ghép cặp(Pairing)",
+                "activeError01": "Kích hoạt người dùng lỗi",
+                "activeError02": "Khóa người dùng lỗi"
+            }
+        } ,
+        "specialistConsultant":{
+            "criteria": "TIÊU CHÍ",
+            "refresh": "Làm mới",
+            "consultingService": "DỊCH VỤ TƯ VẤN",
+            "creditCard": "Thẻ tín dụng",
+            "debitCard": "Thẻ ghi nợ",
+            "unsecuredLoan": "Vay tín chấp",
+            "mortgageLoan": "Vay thế chấp",
+            "otherService": "Dịch vụ khác",
+            "area": "KHU VỰC",
+            "creditInstitutions": "TỔ CHỨC TÍN DỤNG",
+            "enterBankName": "Nhập tên ngân hàng, quỹ tín dụng",
+            "infoCreditOfficers": "THÔNG TIN CÁC CHUYÊN VIÊN TÍN DỤNG",
+            "chatNow": "Chát ngay",
+            "position": "Chức danh",
+            "fields": "Lĩnh vực",
+            "seeMore":"Xem thêm",
+            "distance":"Cách ",
+            "employees":"Nhân viên",
+            "headOfDepartment":"Trưởng phòng",
+            "consultingSubjects":"Đối tượng tư vấn",
+            "personal":"Cá nhân",
+            "company":"Doanh nghiệp"
+        }
+    }
+}

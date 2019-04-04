@@ -1,0 +1,79 @@
+
+{
+    "cicbApp": {
+        "bank" : {
+            "home": {
+                "title": "Banks",
+                "title2": "Sản phẩm vay",
+                "title3": "Sản phẩm mở thẻ",
+                "title4": "Lãi xuất tiết kiệm",
+                "createLabel": "Create a new Bank",
+                "createOrEditLabel": "Create or edit a Bank"
+            },
+            "created": "A new Bank is created with identifier {{ param }}",
+            "updated": "A Bank is updated with identifier {{ param }}",
+            "deleted": "A Bank is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Bank {{ id }}?"
+            },
+            "detail": {
+                "title": "Bank"
+            },
+            "name": "Name",
+            "code": "Code",
+            "swiftCode": "Swift Code",
+            "status": "Status",
+            "phoneNumber": "Phone Number",
+            "parentCode": "Parent Code",
+            "groupCode": "Group Code",
+            "error": {
+                "deleteError01": "Không xóa được bank vì đã được sử dụng bởi gói tín dụng",
+                "deleteError02": "Không xóa được bank vì đã được sử dụng bởi cán bộ tín dụng",
+                "title": "Đăng ký không thành công",
+                "typeError": "Thông tin đăng ký không hợp lệ"
+            },
+            "customer": {
+                "title": "DANH SÁCH TỔ CHỨC TÍN DỤNG",
+                "province": "Thành phố",
+                "district": "Quận/ Huyện",
+                "tctd": "Tổ chức tín dụng",
+                "logo": "Logo",
+                "bank": "Tên ngân hàng",
+                "nameTrade": "Tên giao dịch",
+                "province2": "Tỉnh thành",
+                "address": "Địa chỉ",
+                "action": {
+                    "title": "Thao tác",
+                    "register": "Đăng ký nhu cầu",
+                    "website": "Website",
+                    "consultants": "Chọn tư vấn viên"
+                },
+                "criteria": "Tiêu chí",
+                "refresh": "Làm mới",
+                "bankList": "THÔNG TIN CÁC TỔ CHỨC TÍN DỤNG"
+            },
+            "popup": {
+                "title": "Thông tin nhu cầu vay",
+                "name": "Họ tên",
+                "phone": "Số điện thoại",
+                "object": "Đối tượng",
+                "demand": "Nhu cầu",
+                "personal": "Cá nhân",
+                "enterprise": "Doanh nghiệp",
+                "borrow": "Vay vốn",
+                "card": "Thẻ tín dụng",
+                "send": "Gửi",
+                "cancel": "Đóng"
+            },
+            "success": {
+                "title": "Đăng ký thành công",
+                "message": "Bạn đã đăng ký nhu cầu tín dụng thành công, nhân viên tín dụng sẽ liên hệ với bạn trong thời gian sớm nhất",
+                "deleteError02": "Không xóa được bank vì đã được sử dụng bởi cán bộ tín dụng"
+            },
+            "parent": "Tổ chức tín dụng",
+            "child": "Chi nhánh",
+            "province": "Tỉnh",
+            "district": "Quận huyện"
+        }
+    }
+}

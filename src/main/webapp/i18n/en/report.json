@@ -1,0 +1,74 @@
+
+{
+    "cicbApp": {
+        "report" : {
+            "home": {
+                "title": "Reports",
+                "createLabel": "Create a new Report",
+                "createOrEditLabel": "Create or edit a Report"
+            },
+            "created": "A new Report is created with identifier {{ param }}",
+            "updated": "A Report is updated with identifier {{ param }}",
+            "deleted": "A Report is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Report {{ id }}?",
+                "deleteList": "Xóa Danh Sách Đã Chọn"
+            },
+            "detail": {
+                "title": "Report"
+            },
+            "codeBill": "Code Bill",
+            "accountingEntry": "Accounting Entry",
+            "code": "Code",
+            "name": "Name",
+            "price": "Price",
+            "status": "Status",
+            "url": "Url",
+            "action": "Thao Tác",
+            "buyReport": "Mua Báo Cáo",
+            "dateBuyFrom": "Mua từ ngày",
+            "dateBuyTo": "Dến",
+            "exportExcel": "Xuất Excel",
+            "search": "Tìm Kiếm",
+            "popup": {
+                "title": "Thông Tin Báo Cáo",
+                "success": "Xóa báo cáo thành công",
+                "error": "Xóa lỗi"
+            },
+            "account.regis": {
+                "title": "Danh sách đăng ký tài khoản người dùng của tctd",
+                "bank": "Tổ chức tín dụng",
+                "fromToDate": "Ngày đăng ký",
+                "totalAmount": "Tổng tiền",
+                "status": "Trạng thái",
+                "status.paid": "Đã thanh toán",
+                "status.notPaid": "Chưa thanh toán",
+                "accountNum": "Số lượng TK",
+                "regisDate": "Ngày đăng ký",
+                "payStatus": "Trạng thái thanh toán",
+                "from": "Từ",
+                "to": "Đến"
+            },
+            "acceptedDemand": {
+                "title.customer.card": "báo cáo nhu cầu mở thẻ thể nhân được đáp ứng",
+                "title.enterprise.card": "báo cáo nhu cầu mở thẻ pháp nhân được đáp ứng",
+                "tab.customer.card": "Nhu cầu mở thẻ Thể nhân",
+                "tab.enterprise.card": "Nhu cầu mở thẻ Pháp nhân",
+                "title.customer.loan": "báo cáo nhu cầu vay thể nhân được đáp ứng",
+                "title.enterprise.loan": "báo cáo nhu cầu vay pháp nhân được đáp ứng",
+                "tab.customer.loan": "Nhu cầu vay Thể nhân",
+                "tab.enterprise.loan": "Nhu cầu vay Pháp nhân",
+                "approvedDate": "Ngày phê duyệt",
+                "name": "Họ tên",
+                "cardId": "CMND",
+                "phone": "Số điện thoại",
+                "address": "Địa chỉ",
+                "bank": "Tổ chức tín dụng",
+                "enterpriseName": "Tên doanh nghiệp",
+                "taxCode": "Mã số doanh nghiệp",
+                "contactDetail": "TT liên hệ",
+                "cicCode": "Mã CIC"
+            }
+        }
+    }
+}

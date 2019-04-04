@@ -1,0 +1,351 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+    <div class="card">
+        <div class="card-body">
+            <h2 id="jhi-system-heading">Tạo mới cài đặt hệ thống</h2>
+            <div>
+                <div class="row">
+                    <div class="form-group col-lg-6">
+                        <label class="form-control-label" for="field_highFreeFrom">Ngày trong cước từ</label>
+                        <input type="number" class="form-control" name="highFreeFrom" id="field_highFreeFrom" required
+                               [(ngModel)]="system.highFreeFrom" min="0" jhiMin="1" max="31" jhiMax="31" />
+                        <div [hidden]="!(editForm.controls.highFreeFrom?.dirty && editForm.controls.highFreeFrom?.invalid)">
+                            <small class="form-text text-danger"
+                                   *ngIf="!editForm.controls.highFreeFrom?.errors?.required">
+                                Trường nay bắt buộc nhập.
+                            </small>
+                            <small class="form-text text-danger"
+                                   [hidden]="!editForm.controls.highFreeFrom?.errors?.min">
+                                Trong thẻ từ phải lớn hơn 0
+                            </small>
+                            <small class="form-text text-danger"
+                                   [hidden]="!editForm.controls.highFreeFrom?.errors?.max">
+                                Trong thẻ từ phải nhỏ hơn 32
+                            </small>
+                            <small class="form-text text-danger"
+                                   [hidden]="!editForm.controls.highFreeFrom?.errors?.number">
+                                This field should be a number.
+                            </small>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label class="form-control-label" for="field_hignFeeTo">Ngày trong cước đến</label>
+                        <input type="number" class="form-control" name="hignFeeTo" id="field_hignFeeTo"
+                               [(ngModel)]="system.hignFeeTo"  min="0" jhiMin="1" max="31" jhiMax="31" required/>
+                        <div [hidden]="!(editForm.controls.hignFeeTo?.dirty && editForm.controls.hignFeeTo?.invalid)">
+                            <small class="form-text text-danger"
+                                   *ngIf="!editForm.controls.highFreeFrom?.errors?.required">
+                                Trường nay bắt buộc nhập.
+                            </small>
+                            <small class="form-text text-danger"
+                                   [hidden]="!editForm.controls.hignFeeTo?.errors?.min">
+                                Trong thẻ đến phải lớn hơn 0
+                            </small>
+                            <small class="form-text text-danger"
+                                   [hidden]="!editForm.controls.hignFeeTo?.errors?.max">
+                                Trong thẻ đến phải nhỏ hơn 32
+                            </small>
+                            <small class="form-text text-danger"
+                                   [hidden]="!editForm.controls.feePercentLv?.errors?.number">
+                                This field should be a number.
+                            </small>
+                        </div>
+
+                        <div *ngIf="system.hignFeeTo < system.highFreeFrom">
+                            <small class="form-text text-danger">
+                                Trong thẻ đến phải lớn hơn hoặc bằng trong thẻ từ
+                            </small>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+    </div>
+    </div>
+    <div class="card m-t-20">
+        <div class="card-body">
+            <h2 id="jhi-system-heading4">Chiếu khấu Viettel</h2>
+            <div>
+                <div class="row">
+                    <div class="form-group col-lg-6">
+                        <label class="form-control-label" for="a">Trả trước</label>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" name="feePercentLv1" id="a"
+                                   [(ngModel)]="system.feePercentLv1" min="0" jhiMin="1" max="100" jhiMax="100" required/>
+                            <div class="input-group-append">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+
+                        <div [hidden]="!(editForm.controls.feePercentLv1?.dirty && editForm.controls.feePercentLv1?.invalid)">
+                            <small class="form-text text-danger"
+                                   *ngIf="!editForm.controls.feePercentLv1?.errors?.required">
+                                Trường nay bắt buộc nhập.
+                            </small>
+                            <small class="form-text text-danger"
+                                   [hidden]="!editForm.controls.feePercentLv1?.errors?.min">
+                                Tỷ lệ chiết khấu phải lớn hơn 0
+                            </small>
+                            <small class="form-text text-danger"
+                                   [hidden]="!editForm.controls.feePercentLv1?.errors?.max">
+                                Tỷ lệ chiết khấu phải nhỏ hơn 100
+                            </small>
+                            <small class="form-text text-danger"
+                                   [hidden]="!editForm.controls.feePercentLv1?.errors?.number">
+                                This field should be a number.
+                            </small>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label class="form-control-label" for="b">Trả sau</label>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" name="feePercentLv2" id="b"
+                                   [(ngModel)]="system.feePercentLv2" min="0" jhiMin="1" max="100" jhiMax="100" required/>
+                            <div class="input-group-append">
+                                <span class="input-group-text" >%</span>
+                            </div>
+                        </div>
+
+                        <div [hidden]="!(editForm.controls.feePercentLv2?.dirty && editForm.controls.feePercentLv2?.invalid)">
+                            <small class="form-text text-danger"
+                                   *ngIf="!editForm.controls.feePercentLv2?.errors?.required">
+                                Trường nay bắt buộc nhập.
+                            </small>
+                            <small class="form-text text-danger"
+                                   [hidden]="!editForm.controls.feePercentLv2?.errors?.min">
+                                Tỷ lệ chiết khấu phải lớn hơn 0
+                            </small>
+                            <small class="form-text text-danger"
+                                   [hidden]="!editForm.controls.feePercentLv2?.errors?.max">
+                                Tỷ lệ chiết khấu phải nhỏ hơn 100
+                            </small>
+                            <small class="form-text text-danger"
+                                   [hidden]="!editForm.controls.feePercentLv2?.errors?.number">
+                                This field should be a number.
+                            </small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-lg-6">
+                        <label class="form-control-label" for="c">Trả trước trong cước</label>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" name="feePercentLv1Vina" id="c"
+                                   [(ngModel)]="system.feePercentLv1b" min="0" jhiMin="1" max="100" jhiMax="100" required/>
+                            <div class="input-group-append">
+                                <span class="input-group-text" >%</span>
+                            </div>
+                        </div>
+
+                        <div [hidden]="!(editForm.controls.feePercentLv1Vina?.dirty && editForm.controls.feePercentLv1Vina?.invalid)">
+                            <small class="form-text text-danger"
+                                   *ngIf="!editForm.controls.feePercentLv1Vina?.errors?.required">
+                                Trường nay bắt buộc nhập.
+                            </small>
+                            <small class="form-text text-danger"
+                                   [hidden]="!editForm.controls.feePercentLv1Vina?.errors?.min">
+                                Tỷ lệ chiết khấu phải lớn hơn 0
+                            </small>
+                            <small class="form-text text-danger"
+                                   [hidden]="!editForm.controls.feePercentLv1Vina?.errors?.max">
+                                Tỷ lệ chiết khấu phải nhỏ hơn 100
+                            </small>
+                            <small class="form-text text-danger"
+                                   [hidden]="!editForm.controls.feePercentLv1Vina?.errors?.number">
+                                This field should be a number.
+                            </small>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label class="form-control-label" for="e">Trả sau trong cước</label>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" name="feePercentLv2Vina" id="e"
+                                   [(ngModel)]="system.feePercentLv2b" min="0" jhiMin="1" max="100" jhiMax="100" required/>
+                            <div class="input-group-append">
+                                <span class="input-group-text" >%</span>
+                            </div>
+                        </div>
+
+                        <div [hidden]="!(editForm.controls.feePercentLv2Vina?.dirty && editForm.controls.feePercentLv2Vina?.invalid)">
+                            <small class="form-text text-danger"
+                                   *ngIf="!editForm.controls.feePercentLv2Vina?.errors?.required">
+                                Trường nay bắt buộc nhập.
+                            </small>
+                            <small class="form-text text-danger"
+                                   [hidden]="!editForm.controls.feePercentLv2Vina?.errors?.min">
+                                Tỷ lệ chiết khấu phải lớn hơn 0
+                            </small>
+                            <small class="form-text text-danger"
+                                   [hidden]="!editForm.controls.feePercentLv2Vina?.errors?.max">
+                                Tỷ lệ chiết khấu phải nhỏ hơn 100
+                            </small>
+                            <small class="form-text text-danger"
+                                   [hidden]="!editForm.controls.feePercentLv2Vina?.errors?.number">
+                                This field should be a number.
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card m-t-20">
+        <div class="card-body">
+            <div>
+                <div class="row">
+                    <div class="form-group col-lg-6">
+                        <label>Ngày khuyến mãi VIETTEL</label>
+                        <select name="viettel" class="form-control" [(ngModel)]="system.viettelPromotionDate" id="viettel">
+                            <option value="">Bỏ ngày khuyến mãi</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label>Khóa nhận đơn VIETTEL</label>
+                        <select name="viettel_lock" class="form-control" [(ngModel)]="system.lockViettel" id="viettel_lock">
+                            <option value="true">Khóa nhận đơn</option>
+                            <option value="false">Tiếp tục nhận đơn</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-lg-6">
+                        <label>Ngày khuyến mãi VINA</label>
+                        <select name="vina" class="form-control" [(ngModel)]="system.vinaPromotionDate" id="vina">
+                            <option value="">Bỏ ngày khuyến mãi</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label>Khóa nhận đơn VINA</label>
+                        <select name="vina_lock" class="form-control" [(ngModel)]="system.lockVina" id="vina_lock">
+                            <option value="true">Khóa nhận đơn</option>
+                            <option value="false">Tiếp tục nhận đơn</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-lg-6">
+                        <label>Ngày khuyến mãi MOBI</label>
+                        <select name="mobi" class="form-control" [(ngModel)]="system.mobiPromotionDate" id="mobi">
+                            <option value="">Bỏ ngày khuyến mãi</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label>Khóa nhận đơn MOBI</label>
+                        <select name="mobi_lock" class="form-control" [(ngModel)]="system.lockMobi" id="Mobi_lock">
+                            <option value="true">Khóa nhận đơn</option>
+                            <option value="false">Tiếp tục nhận đơn</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Hủy</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Lưu cài đặt</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
+<swal #success
+      title="Chúc mừng bạn"
+      type="success"
+      text="Cập nhật cài đặt hệ thống thành công"
+      [showConfirmButton]="true"
+      [showCancelButton]="false">
+</swal>

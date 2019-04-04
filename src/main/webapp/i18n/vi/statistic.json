@@ -1,0 +1,89 @@
+{
+    "cicbApp": {
+        "statistic": {
+            "loan": {
+                "titleCustomer": "THỐNG KÊ NHU CẦU VAY THỂ NHÂN",
+                "titleEnterprise":"THỐNG KÊ NHU CẦU VAY PHÁP NHÂN",
+                "loanPack": "Loại vay",
+                "loanPackDtl": "Gói vay",
+                "classify": {
+                    "title1": "Phân loại",
+                    "title2": "Phân loại KH"
+                },
+                "status": {
+                    "title": "Trạng thái",
+                    "status1": "Chờ kết nối",
+                    "status2": "Đã kết nối",
+                    "status0": "Hủy kết nối"
+                },
+                "typeRegister": {
+                    "title": "Loại đăng ký",
+                    "type1": "Từ quảng cáo",
+                    "type2": "Đăng ký tín dụng từ web",
+                    "type4": "Từ Mobile",
+                    "type6": "Từ chọn ngân hàng"
+                },
+                "search": "Tìm kiếm",
+                "exportReport": "Xuất báo cáo",
+                "fullName": "Họ tên",
+                "cmnd": "CMND/CCCD",
+                "phoneNumber": "Số Đt",
+                "address": "Địa chỉ",
+                "createdDate": "Ngày nhu cầu",
+                "totalAmount": "Tổng tiền",
+                "period": "Thời hạn",
+                "note": "Ghi chú",
+                "serialOwner": "Tên DN",
+                "contactName": "Người liên hệ",
+                "serial": "Chứng thư số",
+                "email": "Email",
+                "income": "Thu nhập bản thân",
+                "isMortgage": "Tài sản ĐB",
+                "fromDateToDate": "Từ ngày đến ngày"
+            },
+            "card": {
+                "titleCustomer": "THỐNG KÊ NHU CẦU THẺ THỂ NHÂN",
+                "titleEnterprise":"THỐNG KÊ NHU CẦU THẺ PHÁP NHÂN",
+                "cardPack": "Tên thẻ",
+                "classify": {
+                    "title1": "Phân loại",
+                    "title2": "Phân loại KH",
+                    "type1": "Cơ bản",
+                    "type2": "Vàng",
+                    "type3": "Bạc kim",
+                    "type4": "Đồng hạng",
+                    "type5": "Thẻ khác"
+                },
+                "status": {
+                    "title": "Trạng thái",
+                    "status1": "Chờ kết nối",
+                    "status2": "Đã kết nối",
+                    "status0": "Hủy kết nối"
+                },
+                "typeRegister": {
+                    "title": "Loại đăng ký",
+                    "type3": "Nhu cầu thẻ từ web",
+                    "type5": "Nhu cầu thẻ từ mobile",
+                    "type7": "Nhu cầu thẻ từ ngân hàng"
+                },
+                "search": "Tìm kiếm",
+                "exportReport": "Xuất báo cáo",
+                "fullName": "Họ tên",
+                "cmnd": "CMND/CCCD",
+                "phoneNumber": "Số Đt",
+                "address": "Địa chỉ",
+                "createdDate": "Ngày nhu cầu",
+                "maximumLimit": "Hạn mức",
+                "cardType": "Hạng thẻ",
+                "note": "Ghi chú",
+                "serialOwner": "Tên DN",
+                "contactName": "Người liên hệ",
+                "serial": "Chứng thư số",
+                "email": "Email",
+                "income": "Thu nhập bản thân",
+                "isMortgage": "Tài sản ĐB",
+                "fromDateToDate": "Từ ngày đến ngày"
+            }
+        }
+    }
+}

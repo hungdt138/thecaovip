@@ -1,0 +1,39 @@
+
+{
+    "cicbApp": {
+        "pairing" : {
+            "home": {
+                "title": "Pairings",
+                "createLabel": "Create a new Pairing",
+                "createOrEditLabel": "Create or edit a Pairing"
+            },
+            "created": "A new Pairing is created with identifier {{ param }}",
+            "updated": "A Pairing is updated with identifier {{ param }}",
+            "deleted": "A Pairing is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Pairing {{ id }}?"
+            },
+            "detail": {
+                "title": "Pairing"
+            },
+            "customerInfo": "Customer Info",
+            "status": {
+                "title": "Trạng thái",
+                "sending": "Đang tìm kiếm",
+                "creditOfficerAccept": "Cán bộ chấp nhận",
+                "creditOfficerAcceptCancel": "Cán bộ từ chối",
+                "customerCancel": "Khách hàng hủy"
+            },
+            "rate": "Rate",
+            "creditOfficerInfo": "Credit Officer Info",
+            "acceptanceCount": "Acceptance Count",
+            "pairingCount": "Pairing Count",
+            "creditOfficer": "Credit Officer",
+            "customer": "Customer",
+            "demand": "Demand",
+            "amount": "Số Tiền",
+            "period": "Thời Hạn Vay",
+            "loanPack": "Gói Vay"
+        }
+    }
+}

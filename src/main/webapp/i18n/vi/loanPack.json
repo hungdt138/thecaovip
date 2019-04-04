@@ -1,0 +1,29 @@
+
+{
+    "cicbApp": {
+        "loanPack" : {
+            "home": {
+                "title": "Danh Sách Các Gói Vay",
+                "createLabel": "Thêm Mới Một Gói Vay",
+                "createOrEditLabel": "Thêm Mới Hoặc Cập Nhật Gói Vay"
+            },
+            "created": "Thêm mới gói vay {{ param }} thành công",
+            "updated": "Cập nhật gói vay {{ param }} thành công",
+            "deleted": "Xóa gói vay {{ param }} thành công",
+            "delete": {
+                "question": "Bạn có chắc là muốn xóa gói vay {{ id }}?"
+            },
+            "detail": {
+                "title": "Gói Vay"
+            },
+            "code": "Mã Gói Vay",
+            "name": "Tên Gói Vay",
+            "description": "Mô Tả",
+            "parentId": "Id Cha",
+            "error": {
+                "deleteError01": "Không xóa được gói vay vì đã được sử dụng bởi nhu cầu vay",
+                "deleteError02": "Không xóa được gói vay vì đã được sử dụng bởi chi tiết gói vay"
+            }
+        }
+    }
+}

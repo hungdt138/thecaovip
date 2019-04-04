@@ -1,0 +1,38 @@
+
+{
+    "cicbApp": {
+        "groups" : {
+            "home": {
+                "title": "Groups",
+                "createLabel": "Create a new Groups",
+                "createOrEditLabel": "Create or edit a Groups"
+            },
+            "created": "A new Groups is created with identifier {{ param }}",
+            "updated": "A Groups is updated with identifier {{ param }}",
+            "deleted": "A Groups is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Groups {{ id }}?"
+            },
+            "kickoutUser": {
+                "question": "Are you sure you want to delete User with identifier {{ id }} from this group?"
+            },
+            "detail": {
+                "title": "Groups"
+            },
+            "name": "Name",
+            "type": "Type",
+            "status": "Status",
+            "code": "Code",
+            "error": {
+                "deleteError01": "Không xóa được Nhóm vì đã được sử dụng bởi Nhóm xác thực(GroupAuth)"
+            },
+            "addUser": "Thêm người dùng",
+            "userTabTitle": "Người dùng trong nhóm",
+            "role": "Vai trò",
+            "stt": "STT",
+            "groupDetail": "Danh sách chi tiết",
+            "description": "Mô tả",
+            "noUser": "Nhóm này chưa có người dùng nào"
+        }
+    }
+}

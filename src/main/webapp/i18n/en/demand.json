@@ -1,0 +1,110 @@
+{
+    "cicbApp": {
+        "demand": {
+            "home": {
+                "title": "Demands",
+                "report.title": "Báo cáo nhu cầu mở thẻ tín dụng",
+                "createLabel": "Create a new Demand",
+                "createOrEditLabel": "Create or edit a Demand"
+            },
+            "created": "A new Demand is created with identifier {{ param }}",
+            "updated": "A Demand is updated with identifier {{ param }}",
+            "deleted": "A Demand is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Demand {{ id }}?"
+            },
+            "deleteCard": "Bạn có chắc là muốn xóa ?",
+            "detail": {
+                "title": "Demand"
+            },
+            "type": "Type",
+            "period": "Period",
+            "status": {
+                "title": "Status",
+                "sending": "Đang tìm kiếm",
+                "paired": "Đã bắt cặp",
+                "cancel": "đã hủy"
+            },
+            "amount": "Amount",
+            "lat": "Lat",
+            "lng": "Lng",
+            "note": "Note",
+            "loanPack": "Loan Pack",
+            "customer": {
+                "name": "Full Name",
+                "nameEnterprise": "Tên Doanh nghiệp",
+                "phone": "Telephone",
+                "contact": "Người liên hệ",
+                "cardName": "Name Card",
+                "expect": "Expect",
+                "reject": "Bank",
+                "salary": "Salary",
+                "viewStatus": "View"
+            },
+            "startDate": "From",
+            "endDate": "To",
+            "statusView": "Status View",
+            "statusAll": "Tất cả",
+            "statusWait": "Chờ kết nối",
+            "statusConnected": "Đã kết nối",
+            "TCTD": "TCTD",
+            "company": {
+                "nameCompany": "Company Name",
+                "personal": "Contact Personal",
+                "cardNameCompany": "Name Card",
+                "expectCompany": "Expect",
+                "rejectCompany": "Bank",
+                "viewStatusCompany": "View"
+            },
+            "success": "Success",
+            "error": "Error",
+            "phone": "Telephone",
+            "action": "Action",
+            "status1": "Available",
+            "status2": "Unavailable",
+            "lh1": "Information policy customer",
+            "lh2": "Information about card",
+            "listOpen": "List card",
+            "loanManage": {
+                "title": "DANH SÁCH HỒ SƠ VAY",
+                "typeLoan": "Loại Vay",
+                "totalMoney": "Tổng Tiền",
+                "periodLoan": "Thời Hạn",
+                "bank": "TCTD",
+                "status": "TT Xem Xét",
+                "action": "Thao Tác",
+                "income": "Thu Nhập Bản Thân",
+                "testLoanMF": "KIỂM TRA TRẠNG THÁI HỒ SƠ VAY",
+                "inputPhoneNumber": "Nhập số điện thoại để theo dõi trạng thái nhu cầu vay",
+                "hinPhoneNumber": "Số điện thoại",
+                "close": "Đóng",
+                "send": "Gửi",
+                "titleOtp": "NHẬP SỐ OTP",
+                "inputOtp": "Nhập số OTP đã được gửi đến điện thoại của bạn",
+                "again": "GỬI LẠI MÃ OTP",
+                "fromDate": "Thời gian từ",
+                "toDate": "Đến",
+                "statusSearch": "Trạng thái xem xét",
+                "statusSelect": "Chọn trạng thái xem xét",
+                "loanPack": "Gói vay",
+                "mortgage": "Tài sản đảm bảo",
+                "mortgage2": "Tài sản ĐB",
+                "deleteList": "Xóa danh sách đã chọn",
+                "chooseTypeLoan": "Chọn loại vay",
+                "chooseLoanPack": "Chọn gói vay",
+                "search": "Tìm kiếm",
+                "exportExcel": "Export Excell",
+                "otpPattern": "Mã OTP chỉ được phép nhập từ 0 - 9.",
+                "response": "Phản hồi",
+                "like": "Thích"
+            },
+            "from": "From",
+            "to": "To",
+            "deleteSuccess": "Success !",
+            "deleteError": "Error !",
+            "date": "Ngày nhu cầu",
+            "inputOverflow": "The message has more than 1000 characters",
+            "deleteProfile": "Are you sure you want to delete these Loan Profile"
+        }
+    }
+}

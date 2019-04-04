@@ -1,0 +1,35 @@
+
+{
+    "cicbApp": {
+        "customer" : {
+            "home": {
+                "title": "Customers",
+                "createLabel": "Create a new Customer",
+                "createOrEditLabel": "Create or edit a Customer"
+            },
+            "created": "A new Customer is created with identifier {{ param }}",
+            "updated": "A Customer is updated with identifier {{ param }}",
+            "deleted": "A Customer is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Customer {{ id }}?"
+            },
+            "detail": {
+                "title": "Customer"
+            },
+            "phoneNumber": "Phone Number",
+            "fullName": "Full Name",
+            "status": "Status",
+            "password": "Password",
+            "type": "Type",
+            "gender": {
+                "title": "Gender",
+                "female": "Female",
+                "male": "Male"
+            },
+            "error": {
+                "deleteError01": "Không xóa được Khách Hàng vì đã được sử dụng bởi nhu cầu vay(Demand)",
+                "deleteError02": "Không xóa được Khách Hàng vì đã được sử dụng bởi gép cặp(Pairing)"
+            }
+        }
+    }
+}

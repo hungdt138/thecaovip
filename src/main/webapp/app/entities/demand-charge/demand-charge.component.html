@@ -1,0 +1,47 @@
+<div class="card">
+    <div class="card-header">
+        <h2 id="page-heading">
+            <span>Danh sách thẻ nạp lỗi</span>
+        </h2>
+    </div>
+    <div class="table-responsive" *ngIf="demandCharges">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="inputValue"><span>Giá trị thẻ</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="code"><span>Code</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="serial"><span>Serial</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="serial"><span>Tài khoản</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="serial"><span>Thời gian xử lý xong</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="serial"><span>Message</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let demandCharge of demandCharges ;trackBy: trackId">
+                <td>{{demandCharge.inputValue  | pointReplacer}}</td>
+                <td>{{demandCharge.code}}</td>
+                <td>{{demandCharge.serial}}</td>
+                <td>{{demandCharge.demand?.account}}</td>
+                <td>{{demandCharge.message}}</td>
+                <td>{{demandCharge.lastModifiedDate | date:'dd/MM/yyyy hh:mm:ss'}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['/demand-charge', demandCharge.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Cập nhật trạng thái</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="demandCharges && demandCharges.length">
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

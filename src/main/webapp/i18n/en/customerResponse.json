@@ -1,0 +1,25 @@
+
+{
+    "cicbApp": {
+        "customerResponse" : {
+            "home": {
+                "title": "Customer Responses",
+                "createLabel": "Create a new Customer Response",
+                "createOrEditLabel": "Create or edit a Customer Response"
+            },
+            "created": "A new Customer Response is created with identifier {{ param }}",
+            "updated": "A Customer Response is updated with identifier {{ param }}",
+            "deleted": "A Customer Response is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Customer Response {{ id }}?"
+            },
+            "detail": {
+                "title": "Customer Response"
+            },
+            "phoneNumber": "Phone Number",
+            "content": "Content",
+            "status": "Status",
+            "bank": "Bank"
+        }
+    }
+}

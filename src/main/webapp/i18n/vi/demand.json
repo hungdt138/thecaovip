@@ -1,0 +1,110 @@
+{
+    "cicbApp": {
+        "demand": {
+            "home": {
+                "title": "Thông tin nhu cầu vay vốn của khách hàng",
+                "createLabel": "Thêm mới một Demand",
+                "createOrEditLabel": "Thêm mới hoặc cập nhật Demand",
+                "report.title":"Báo cáo nhu cầu mở thẻ tín dụng"
+            },
+            "created": "Một Demand mới được tạo với định danh {{ param }}",
+            "updated": "Một Demand cập nhật với định danh {{ param }}",
+            "deleted": "Một Demand đã xóa với định danh {{ param }}",
+            "delete": {
+                "question": "Bạn có chắc là muốn xóa Demand {{ id }}?"
+            },
+            "deleteCard": "Bạn có chắc là muốn xóa ?",
+            "detail": {
+                "title": "Thông tin chi tiết nhu cầu vay"
+            },
+            "type": "Nhu cầu",
+            "period": "Thời gian vay",
+            "status": {
+                "title": "Trạng thái",
+                "sending": "Chờ kết nối",
+                "paired": "Đã kết nối",
+                "cancel": "Đã hủy"
+            },
+            "amount": "Số tiền muốn vay",
+            "lat": "Lat",
+            "lng": "Lng",
+            "note": "Ghi chú",
+            "loanPack": "Gói vay",
+            "customer": {
+                "name": "Họ tên",
+                "nameEnterprise": "Tên Doanh nghiệp",
+                "phone": "Số điện thoại",
+                "contact": "Người liên hệ",
+                "cardName": "Tên thẻ",
+                "expect": "Hạn mức",
+                "reject": "TCTD",
+                "salary": "Thu nhập cá nhân",
+                "viewStatus": "TT xem xét"
+            },
+            "startDate": "Từ",
+            "endDate": "Đến",
+            "statusView": "Trạng thái xem xét",
+            "statusAll": "Tất cả",
+            "statusWait": "Chờ kết nối",
+            "statusConnected": "Đã kết nối",
+            "TCTD": "TCTD",
+            "company": {
+                "nameCompany": "Tên DN",
+                "personal": "Người liên hệ",
+                "cardNameCompany": "Tên thẻ",
+                "expectCompany": "Hạn mức",
+                "rejectCompany": "TCTD",
+                "viewStatusCompany": "TT xem xét"
+            },
+            "success": "Thành công",
+            "error": "Lỗi",
+            "phone": "Số điện thoại",
+            "action": "Thao tác",
+            "status1": "Đã kết nối",
+            "status2": "Chờ kết nối",
+            "lh1": "Thông tin pháp lý về KH",
+            "lh2": "Thông tin về nhu cầu thẻ",
+            "listOpen": "Danh sách mở thẻ tín dụng",
+            "loanManage": {
+                "title": "DANH SÁCH HỒ SƠ VAY",
+                "typeLoan": "Loại Vay",
+                "totalMoney": "Tổng Tiền",
+                "periodLoan": "Thời Hạn",
+                "bank": "TCTD",
+                "status": "TT Xem Xét",
+                "action": "Thao Tác",
+                "income": "Thu Nhập Bản Thân",
+                "testLoanMF": "KIỂM TRA TRẠNG THÁI HỒ SƠ VAY",
+                "inputPhoneNumber": "Nhập số điện thoại để theo dõi trạng thái nhu cầu vay",
+                "hinPhoneNumber": "Số điện thoại",
+                "close": "Đóng",
+                "send": "Gửi",
+                "titleOtp": "NHẬP SỐ OTP",
+                "inputOtp": "Nhập số OTP đã được gửi đến điện thoại của bạn",
+                "again": "GỬI LẠI MÃ OTP",
+                "fromDate": "Thời gian từ",
+                "toDate": "Đến",
+                "statusSearch": "Trạng thái xem xét",
+                "statusSelect": "Chọn trạng thái xem xét",
+                "loanPack": "Gói vay",
+                "mortgage": "Tài sản đảm bảo",
+                "mortgage2": "Tài sản ĐB",
+                "deleteList": "Xóa danh sách đã chọn",
+                "chooseTypeLoan": "Chọn loại vay",
+                "chooseLoanPack": "Chọn gói vay",
+                "search": "Tìm kiếm",
+                "exportExcel": "Xuất Excel",
+                "otpPattern": "Mã OTP chỉ được phép nhập từ 0 - 9.",
+                "response": "Phản hồi",
+                "like": "Thích"
+            },
+            "from": "Từ",
+            "to": "Đến",
+            "deleteSuccess": "Xóa thành công !",
+            "deleteError": "Xóa thất bại !",
+            "inputOverflow": "Tin nhắn quá 1000 ký tự",
+            "deleteProfile": "Bạn có muốn xóa những hồ sơ này",
+            "date": "Ngày nhu cầu"
+        }
+    }
+}

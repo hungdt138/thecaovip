@@ -1,0 +1,35 @@
+
+{
+    "cicbApp": {
+        "area" : {
+            "home": {
+                "title": "Danh mục địa bàn hành chính",
+                "createLabel": "Thêm mới địa bàn hành chính",
+                "createOrEditLabel": "Thêm mới hoặc cập nhật địa bàn hành chính"
+            },
+            "created": "Thêm mới địa bàn hành chính thành công",
+            "updated": "Sửa địa bàn hành chính thành công",
+            "deleted": "Xóa địa bàn hành chính thành công",
+            "delete": {
+                "question": "Bạn có chắc là muốn xóa địa bàn hành chính {{ id }}?"
+            },
+            "detail": {
+                "title": "địa bàn hành chính"
+            },
+            "code": "Mã",
+            "parentcode": "Mã cha",
+            "name": "Tên ",
+            "status": "Trạng thái",
+            "error": {
+                "error01": "Mã địa bàn hành chính đã tồn tại",
+                "error02": "Mã cha không tồn tại",
+                "error03": "Mã Địa bàn hành chính không tồn tại"
+            },
+            "province": "Tỉnh",
+            "district": "Huyện",
+            "commune": "Xã",
+            "chooseArea": "Chọn khu vực",
+            "choose": "Chọn"
+        }
+    }
+}

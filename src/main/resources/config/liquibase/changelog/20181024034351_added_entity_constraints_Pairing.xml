@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Pairing.
+    -->
+    <changeSet id="20181024034351-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="creditofficerid"
+                                 baseTableName="pairing"
+                                 constraintName="fk_pairing_credit_officer_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="creditofficer"/>
+
+        <addForeignKeyConstraint baseColumnNames="customerid"
+                                 baseTableName="pairing"
+                                 constraintName="fk_pairing_customer_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="customer"/>
+
+        <addForeignKeyConstraint baseColumnNames="demandid"
+                                 baseTableName="pairing"
+                                 constraintName="fk_pairing_demand_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="demand"/>
+
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{email.register.title}">JHipster creation</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="shortcut icon" th:href="@{|${baseUrl}/favicon.ico|}" />
+    </head>
+    <body>
+        <p th:text="#{email.register.hello}"></p>
+        <p>
+            <span th:text="#{email.register.content(${user.getFullName()})}"></span>
+            <br/>
+            <span th:text="#{email.register.website}">
+                Website address
+            </span>
+        </p>
+        <p th:text="#{email.register.stk(${user.getPhoneNumber()})}">
+            Account
+        </p>
+        <p th:text="#{email.register.mk(${user.getPassword()})}">
+            Password
+        </p>
+        <p th:text="#{email.thank}">
+            Password
+        </p>
+        <p th:text="#{email.contact}">
+            Password
+        </p>
+        <p th:text="#{email.content.caution}" style="color: red">
+            This is automatic mail.
+        </p>
+        <p>
+            <span th:text="#{email.activation.text2}">Regards, </span>
+            <br/>
+            <em th:text="#{email.signature}">JHipster.</em>
+        </p>
+        <p></p>
+    </body>
+</html>

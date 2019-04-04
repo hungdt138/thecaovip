@@ -1,0 +1,103 @@
+<div class="card">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-lg-2">
+                <label for="account">Tài khoản nạp</label>
+                <input type="text" class="form-control" [(ngModel)]="account" id="account" name="accoiunt"/>
+            </div>
+            <div class="col-lg-2" *ngIf="currentAccount?.authorities.includes('ROLE_ADMIN')">
+                <label for="partnerId">Partner ID</label>
+                <input type="text" class="form-control" [(ngModel)]="partnerId" id="partnerId" name="partnerId"/>
+            </div>
+            <div class="col-lg-2" *ngIf="currentAccount?.authorities.includes('ROLE_ADMIN')">
+                <label for="fullName">User tạo</label>
+                <input type="text" class="form-control" [(ngModel)]="fullName" id="fullName" name="fullName"/>
+            </div>
+            <div class="form-group col-lg-3">
+                <label class="form-control-label" for="field_nhaMang3">Trạng thái đơn</label>
+                <select class="form-control" name="nhaMang2" [(ngModel)]="status" id="field_nhaMang3" required>
+                    <option value="">Tất cả</option>
+                    <option value="1">Đang nạp</option>
+                    <option value="2">Đã nạp xong</option>
+                    <option value="3">Đã hủy</option>
+                </select>
+            </div>
+            <div class="col-lg-3">
+                <label>&nbsp;</label>
+                <div>
+                    <button class="btn btn-success" (click)="loadAll()">Tìm kiếm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card m-t-10">
+    <div class="card-header">
+        <h2 id="page-heading">
+            <span>Danh sách đơn hàng</span>
+            <!--<button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-bill" [routerLink]="['/bill/new']">-->
+                <!--<fa-icon [icon]="'plus'"></fa-icon>-->
+                <!--<span >-->
+                <!--Tạo mới đơn hàng-->
+                <!--</span>-->
+            <!--</button>-->
+            <!--<button id="jh-create-entity2" class="btn btn-success float-right jh-create-entity create-bill" [routerLink]="['/bill/import-new']" style="margin-right: 10px">-->
+                <!--<fa-icon [icon]="'plus'"></fa-icon>-->
+                <!--<span >-->
+                <!--Import đơn hàng-->
+                <!--</span>-->
+            <!--</button>-->
+        </h2>
+    </div>
+    <div *ngIf="bills">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="name" *ngIf="currentAccount?.authorities.includes('ROLE_ADMIN')"><span>ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="name"><span>Tài khoản</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="type"><span>Nhà mạng</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="status"><span>Trạng thái</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th><span>Tỷ lệ nạp</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="priority"><span>Trả trước/sau</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="name" *ngIf="currentAccount?.authorities.includes('ROLE_ADMIN')"><span>Người tạo</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th><span>Ngày tạo</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let bill of bills ;trackBy: trackId">
+                <td *ngIf="currentAccount?.authorities.includes('ROLE_ADMIN')">{{bill.partnerId}}</td>
+                <td>{{bill.account}}</td>
+                <td>{{bill.type === 'VTT' ? 'Viettel' : bill.type === 'VNP' ? 'VINAPHONE' : 'MOBI'}}</td>
+                <td>{{(bill.status === 0 || bill.status === -2 ) ? 'Đã hủy' : (bill.status === 3 ? 'Nạp sai nhiều lần' : ((bill.chargedAmount >= bill.amount) ? 'Đã nạp xong' : 'Đang nạp'))}}</td>
+                <td>{{bill.chargedAmount | pointReplacerNoVND }} / {{bill.amount | pointReplacerNoVND}}</td>
+                <td>{{bill.chargeType === 1 ? 'Trả trước' : 'Trả sau'}}</td>
+                <td *ngIf="currentAccount?.authorities.includes('ROLE_ADMIN')">{{bill.fullName}}</td>
+                <td>{{bill.createdDate}}</td>
+                <td class="text-right">
+                    <button type="submit"
+                            [routerLink]="['/bill', bill.id, 'view' ]"
+                            class="btn btn-info btn-sm">
+                        <fa-icon [icon]="'eye'"></fa-icon>
+                        <span class="d-none d-md-inline">Xem đơn hàng</span>
+                    </button>
+                    <button type="submit"
+                            [routerLink]="['/', 'bill', { outlets: { popup: bill.id + '/delete'} }]"
+                            replaceUrl="true"
+                            queryParamsHandling="merge"
+                            class="btn btn-danger btn-sm"
+                            [disabled]="bill.status !== 1 || bill.chargedAmount >= bill.amount">
+                        <fa-icon [icon]="'times'"></fa-icon>
+                        <span class="d-none d-md-inline">Xóa đơn hàng</span>
+                    </button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="bills && bills.length">
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

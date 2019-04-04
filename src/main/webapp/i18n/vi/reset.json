@@ -1,0 +1,40 @@
+{
+    "reset": {
+        "request": {
+            "title": "Khôi phục mật khẩu",
+            "form": {
+                "button": "Đặt lại mật khẩu",
+                "back": "Quay lại",
+                "send": "Gửi"
+            },
+            "messages": {
+                "info": "Nhập địa chỉ email mà bạn đã sử dụng để đăng ký",
+                "success": "Vui lòng kiểm tra hòm thư của bạn để xem chi tiết cách lấy lại mật khẩu.",
+                "notfound": "Địa chỉ email chưa được đăng ký! Vui lòng kiểm tra lại."
+            },
+            "sendOtp": {
+                "info": "Nhập số điện thoại đã sử dụng để đăng ký",
+                "success": "Vui lòng kiểm tra tin nhắn trên điện thoại của bạn để lấy mã OTP.",
+                "notfound": "Số điện thoại chưa được đăng ký! Vui lòng kiểm tra lại."
+            },
+            "resetByEmail": "Gửi email",
+            "resetByOtp": "Gửi mã OTP",
+            "otpCode": "Mã OTP"
+        },
+        "finish" : {
+            "title": "Đặt lại mật khẩu",
+            "form": {
+                "button": "Đổi mật khẩu",
+                "otpCode": "Mã OTP"
+            },
+            "messages": {
+                "info": "Chọn mật khẩu",
+                "success": "Mật khẩu của bạn đã được đặt lại",
+                "keymissing": "Không tìm thấy khóa để đặt lại mật khẩu.",
+                "errorEmail": "Không thể đặt lại mật khẩu của bạn. Lưu ý, yêu cầu đặt lại mật khẩu chỉ có hiệu lực trong 24 giờ.",
+                "errorOtp": "Không thể đặt lại mật khẩu của bạn. Mã OTP không hiệu lực."
+            }
+        }
+    }
+
+}

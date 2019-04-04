@@ -1,0 +1,32 @@
+{
+    "userCicb": {
+        "home": {
+            "title": "Danh sách người dùng hệ thống của CICB",
+            "createLabel": "Tạo mới người dùng",
+            "editLabel": "Chỉnh sửa người dùng"
+        },
+        "created": "Tạo người dùng thành công",
+        "updated": "Cập nhật thông tin người dùng thành công",
+        "deleted": "Xóa người dùng thành công",
+        "delete": {
+            "question": "Bạn có chắc chắn muốn xóa người dùng: {{ login }}?"
+        },
+        "stt": "STT",
+        "userName": "Tên DN",
+        "fullName": "Họ tên",
+        "email": "Email",
+        "status": "Trạng thái",
+        "role": "Vai trò",
+        "action": "Thao tác",
+        "totalCount": "Tổng số: {{param}}",
+        "deactivated": "Ngưng hoạt động",
+        "activated": "Đang hoạt động",
+        "password": "Mật khẩu",
+        "rePassword": "Nhập lại mật khẩu",
+        "error": {
+            "userexists": "Tên đăng nhập đã được sử dụng",
+            "emailexists": "Địa chỉ email đã được sử dụng",
+            "passwordDontMatch": "Xác nhận mật khẩu không khớp"
+        }
+    }
+}

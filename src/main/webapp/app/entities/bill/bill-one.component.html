@@ -1,0 +1,225 @@
+<div class="card nhamang" *ngIf="!selected">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-lg-8">
+                <h5>Chọn nhà mạng</h5>
+            </div>
+        </div>
+    </div>
+    <div class="row m-b-20">
+        <div class="col-md-4 text-center">
+            <img src="{{'content/images/hg/viettel.png'}}" alt="" (click)="changeType('VTT');" class="pointer"/>
+        </div>
+        <div class="col-md-4 text-center">
+            <img src="{{'content/images/hg/vinaphone.png'}}" alt="" (click)="changeType('VNP');" class="pointer"/>
+        </div>
+        <div class="col-md-4 text-center">
+            <img src="{{'content/images/hg/mobi.png'}}" alt="" (click)="changeType('VMS');" class="pointer"/>
+        </div>
+    </div>
+</div>
+<div class="row" *ngIf="selected">
+    <div class="col-md-6">
+        <div class="card">
+            <ngb-tabset >
+                <ngb-tab >
+                    <ng-template ngbTabTitle>Nạp trả trước</ng-template>
+                    <ng-template ngbTabContent>
+                        <div>
+                            <form #editForm2="ngForm">
+                                <div>
+                                    <div class="card-header">
+                                        <div class="row">
+                                            <div class="form-group col-md-12">
+                                                <label class="form-control-label">Tên người nạp</label>
+                                                <input type="text" class="form-control" name="field_amount" id="field_name2"
+                                                       [(ngModel)]="demand.name" placeholder="VD: Đơn anh hiếu giề" autocomplete="off" />
+                                            </div>
+                                            <div class="form-group col-md-12">
+                                                <label class="form-control-label" for="field_account2">Tài khoản muốn nạp</label>
+                                                <input type="text" class="form-control" name="account" id="field_account2"
+                                                       [(ngModel)]="demand.account" required autocomplete="off" />
+                                            </div>
+                                            <div class="form-group col-md-12">
+                                                <label class="form-control-label" for="field_amount2">Số tiền nạp</label>
+                                                <input type="text" class="form-control" name="amount" id="field_amount2"
+                                                       [(ngModel)]="demand.amount" hgCurrencyMask required autocomplete="off" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="m-b-10 m-l-10">
+                                        <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                                            <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Hủy</span>
+                                        </button>
+                                        <button type="submit" id="save-entity" [disabled]="editForm2.form.invalid || isSaving" class="btn btn-primary" (click)="save()">
+                                            <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Xác nhận đơn hàng</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </ng-template>
+                </ngb-tab>
+                <ngb-tab>
+                    <ng-template ngbTabTitle>Nạp trả sau</ng-template>
+                    <ng-template ngbTabContent>
+                        <div>
+                            <form #editForm="ngForm">
+                                <div>
+                                    <div class="card-header">
+                                        <div class="row">
+                                            <div class="col-lg-8">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck2" name="moreFee2" [(ngModel)]="bill2.highPriority">
+                                                    <label class="custom-control-label" for="customCheck2">Ưu tiên đơn hàng (+3%)</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck3" name="moreFee3" [(ngModel)]="bill2.moreFee">
+                                                    <label class="custom-control-label" for="customCheck3">Nạp chọn mệnh giá (+3%)</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-header">
+                                        <div class="row">
+                                            <div class="form-group col-md-12">
+                                                <label class="form-control-label" for="field_amount2">Tên người nạp</label>
+                                                <input type="text" class="form-control" name="field_amount6" id="field_name3"
+                                                       [(ngModel)]="demand2.name" placeholder="VD: Đơn anh hiếu giề" autocomplete="off"/>
+                                            </div>
+                                            <div class="form-group col-md-12">
+                                                <label class="form-control-label" for="field_account2">Tài khoản muốn nạp</label>
+                                                <input type="text" class="form-control" name="field_account5" id="field_account3"
+                                                       [(ngModel)]="demand2.account" required (ngModelChange)="isLetter()" autocomplete="off" />
+                                            </div>
+                                            <div class="form-group col-md-12">
+                                                <label class="form-control-label" for="field_amount2">Số tiền nạp</label>
+                                                <input type="text" class="form-control" name="field_amount4" id="field_amount3"
+                                                       [(ngModel)]="demand2.amount" hgCurrencyMask required/>
+                                            </div>
+                                            <div class="form-group col-md-12">
+                                                <label class="form-control-label" for="field_nhaMang3">Loại dịch vụ</label>
+                                                <select class="form-control" name="nhaMang2" [(ngModel)]="demand2.serviceType" id="field_nhaMang3" required>
+                                                    <option value="1">Di động - Dcom, PSTN (Số cố định)</option>
+                                                    <option value="4">ADSL/FTTH/NEXTTV</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="m-b-10 m-l-10">
+                                        <button type="button" id="cancel-save2" class="btn btn-secondary"  (click)="previousState()">
+                                            <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Hủy</span>
+                                        </button>
+                                        <button type="submit" id="save-entity3" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary" (click)="save2()">
+                                            <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Xác nhận đơn hàng</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </ng-template>
+                </ngb-tab>
+            </ngb-tabset>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <p>Xin chào : <strong>{{currentAccount.fullName}}</strong></p>
+                <p>Số dư tài khoản: <strong>{{currentAccount.amount | pointReplacer}}</strong></p>
+                <p>Số dư khả dụng: <strong>{{currentAccount.availableAmount | pointReplacer}}</strong></p>
+                <p>Số tiền chờ nạp: <strong>{{currentAccount.chargeAmount | pointReplacer}}</strong></p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p *ngIf="bill.type === 'VTT'">Viettel trả trước {{bill.type}}: <strong>{{100 - currentAccount.feePercentLv1}} %</strong></p>
+                        <p *ngIf="bill.type === 'VNP'">Vina Trả trước {{bill.type}}: <strong>{{100 - currentAccount.feePercentLv1Vina}} %</strong></p>
+                        <p *ngIf="bill.type === 'VMS'">Mobi Trả trước {{bill.type}}: <strong>{{100 - currentAccount.feePercentLv1Mobi}} %</strong></p>
+                    </div>
+                    <div class="col-md-6">
+                        <p *ngIf="bill.type === 'VTT'">Viettel Trả sau {{bill.type}}: <strong>{{100 - currentAccount.feePercentLv2}} %</strong></p>
+                        <p *ngIf="bill.type === 'VNP'">Vina Trả sau {{bill.type}}: <strong>{{100 - currentAccount.feePercentLv2Vina}} %</strong></p>
+                        <p *ngIf="bill.type === 'VMS'">Mobi Trả sau {{bill.type}}: <strong>{{100 - currentAccount.feePercentLv2Mobi}} %</strong></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card m-t-20" *ngIf="selected">
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th><span>Tài khoản</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+                    <th><span>Nhà mạng</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+                    <th><span>Trạng thái</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+                    <th><span>Tỷ lệ nạp</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+                    <th><span>Trả trước/sau</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let bill of bills">
+                    <td>{{bill.account}}</td>
+                    <td>{{bill.type === 'VTT' ? 'Viettel' : bill.type === 'VNP' ? 'VINAPHONE' : 'MOBI'}}</td>
+                    <td>{{bill.status === 0 ? 'Đã hủy' : (bill.status === 3 ? 'Nạp sai nhiều lần' : ((bill.chargedAmount === bill.amount) ? 'Đã nạp xong' : 'Đang nạp'))}}</td>
+                    <td>{{bill.chargedAmount | pointReplacerNoVND }} / {{bill.amount | pointReplacerNoVND}}</td>
+                    <td>{{bill.chargeType === 1 ? 'Trả trước' : 'Trả sau'}}</td>
+                    <td class="text-right">
+                        <button type="submit"
+                                [routerLink]="['/bill', bill.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">Xem đơn hàng</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'bill', { outlets: { popup: bill.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm"
+                                [disabled]="bill.status !== 1 || bill.chargedAmount >= bill.amount">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Xóa đơn hàng</span>
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<swal #success
+      title="Chúc mừng bạn"
+      type="success"
+      text="Thêm mới đơn hàng thành công"
+      [showConfirmButton]="true"
+      [showCancelButton]="false">
+</swal>
+<swal #errorSwal
+      title="Có lỗi sảy ra"
+      type="error"
+      [showConfirmButton]="false"
+      [showCancelButton]="true">
+    <div *swalPartial class="alert alert-info">
+        <strong>{{ errorMessage }}</strong>
+    </div>
+</swal>
+
+<swal #confirmSwal
+      [showConfirmButton]="true"
+      [showCancelButton]="true"
+      confirmButtonText="Xác nhận"
+      cancelButtonText="Hủy"
+      (confirm)="saveData()">
+    <div *swalPartial>
+        <h3 class="text-center"><strong>Bạn có chắc chắn tạo mới đơn hàng:</strong></h3>
+        <p *ngIf="isOne">Nạp cho tài khoản <span class="text-danger">{{demand.account}}</span> với số tiền <span
+            class="text-danger">{{demand.amount | pointReplacer}}</span> không?</p>
+        <p *ngIf="!isOne">Nạp cho tài khoản <span class="text-danger">{{demand2.account}}</span> với số tiền <span
+            class="text-danger">{{demand2.amount | pointReplacer}}</span> không?</p>
+    </div>
+</swal>

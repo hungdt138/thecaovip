@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{email.assign.code.title}">JHipster send otp to customer</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="shortcut icon" th:href="@{|${baseUrl}/favicon.ico|}" />
+    </head>
+    <body>
+        <p th:text="#{email.assign.code.customer(${user.getFullName()})}">
+            Dear
+        </p>
+        <p>
+            <span th:text="#{email.assign.code.cmnd(${user.getCommune()})}"></span>
+        </p>
+        <p th:text="#{email.assign.code.cic(${user.getCicCode()})}">
+            CIC Code
+        </p>
+        <p th:text="#{email.assign.code.date(${user.getCreatedDate()})}" style="color: red">
+            This is register date
+        </p>
+        <p>
+            <span th:text="#{email.assign.code.country(${user.getDistrict()})}">Country </span>
+        </p>
+        <p th:text="#{email.assign.code.address}">
+        </p>
+        <p th:text="#{email.content.caution}" style="color: red">
+            This is automatic mail.
+        </p>
+        <p>
+            <span th:text="#{email.activation.text2}">Regards, </span>
+            <br/>
+            <em th:text="#{email.signature}">JHipster.</em>
+        </p>
+    </body>
+</html>

@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="customerReport" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryNewPage="true" uuid="43fad84c-1b7b-4c6b-8222-04179c089d26">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.report.description" value=""/>
+	<parameter name="searchDate" class="java.lang.String"/>
+	<parameter name="answerDate" class="java.lang.String"/>
+	<parameter name="fullName" class="java.lang.String"/>
+	<parameter name="dateOfBirth" class="java.lang.String"/>
+	<parameter name="cicCode" class="java.lang.String"/>
+	<parameter name="address" class="java.lang.String"/>
+	<parameter name="phoneNumber" class="java.lang.String"/>
+	<parameter name="identification" class="java.lang.String"/>
+	<parameter name="point" class="java.lang.String"/>
+	<parameter name="level" class="java.lang.String"/>
+	<parameter name="scoredDate" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="86" splitType="Stretch">
+			<staticText>
+				<reportElement x="200" y="3" width="330" height="20" uuid="8518a9a8-4085-489d-ae19-1dea9df95de3"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NGÂN HÀNG NHÀ NƯỚC VIỆT NAM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="18" width="330" height="20" uuid="0968cf45-5b06-4b92-a6ba-0b6105274597"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TRUNG TÂM THÔNG TIN TÍN DỤNG QUỐC GIA VIỆT NAM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="32" width="330" height="46" uuid="c423cd69-cb8c-46c2-9666-32d65ee4bf48"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Địa chỉ: Số 10 Quang Trung, Quận Hà Động, TP Hà nội
+Điện thoại: (04) 33119218 Fax:(04) 33527801
+Email:htkh@creditinfo.org.vn Web: Https://cic.org.vn]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="715" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="14" width="510" height="26" uuid="a55b0125-ab74-47bd-b66d-f2971157fb42"/>
+				<textElement textAlignment="Center">
+					<font fontName="Palatino Linotype" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[THÔNG TIN TÍN DỤNG KHÁCH HÀNG VAY CÁ NHÂN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="50" width="70" height="20" uuid="f236c67e-6b8d-401b-b5a3-317c13bf8530"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Ngày tra cứu:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="90" y="50" width="100" height="20" uuid="1daedad4-b9f7-4032-a17c-54f1781ba782"/>
+				<textFieldExpression><![CDATA[$P{searchDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="360" y="50" width="70" height="20" uuid="7555939c-9316-4dfe-bdd0-27c33aa5b3c6"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Ngày trả lời:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="430" y="50" width="100" height="20" uuid="c070b34f-f1b4-430e-af15-f93cfd66d5c6"/>
+				<textFieldExpression><![CDATA[$P{answerDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="74" width="280" height="16" uuid="fa32003d-5331-4ae4-9e4d-c9770c4bc03d"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1. Thông tin định danh về khách hàng]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="94" width="150" height="20" uuid="950d9939-9d48-4d66-9615-f0775db33c73"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Tên khách hàng:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="113" width="150" height="20" uuid="65b73742-e7a7-48f1-8f71-64c467eae861"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Ngày Sinh:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="132" width="150" height="20" uuid="4bd572ca-6411-4e54-acf0-f9121524535e"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Mã số CIC:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="151" width="150" height="20" uuid="9dbb7092-1993-4d8f-8931-76abb874baab"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Địa chỉ:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="170" width="150" height="20" uuid="489fc24e-1590-42d7-b2e5-29b75171346c"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Điện thoại:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="189" width="150" height="20" uuid="ca2a97af-f96b-48e3-a8d3-bfeb39e34d8f"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Chứng minh nhân dân:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="170" y="94" width="210" height="20" uuid="1e20e5e8-60de-4800-be54-b2f6322ebd6b"/>
+				<textFieldExpression><![CDATA[$P{fullName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="113" width="210" height="20" uuid="afd2b358-7d04-4aeb-bdd8-4ff4e26bba52"/>
+				<textFieldExpression><![CDATA[$P{dateOfBirth}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="132" width="210" height="20" uuid="54dcf1f8-20e5-4efe-a9cf-2d73db015820"/>
+				<textFieldExpression><![CDATA[$P{cicCode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="151" width="210" height="20" uuid="751e3b3b-5834-4661-83d7-f22f83605449"/>
+				<textFieldExpression><![CDATA[$P{address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="170" width="210" height="20" uuid="3ad1974d-107d-40b9-8da7-bcc55301c4d1"/>
+				<textFieldExpression><![CDATA[$P{phoneNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="189" width="210" height="20" uuid="90d0a32f-d45e-4f93-bfdc-cc71bc4e8c43"/>
+				<textFieldExpression><![CDATA[$P{identification}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="209" width="280" height="16" uuid="2c505906-406d-4b4a-8020-50f70a511aaf"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2. Điểm tín dụng]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="230" width="100" height="20" uuid="3498a459-9ab1-49a6-8ffa-4df00378f8a0"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Điểm tín dụng:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="250" width="100" height="20" uuid="8ae01690-6b82-4c40-80e4-7d493837b8f3"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Mức độ rủi ro:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="270" width="100" height="20" uuid="90749a88-50c9-4b52-ab43-1d527793fa2e"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Ngày chấm điểm:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="180" y="230" width="200" height="20" uuid="d9c1c578-b969-46cc-b4ee-67ecb8274dba"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{point}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="250" width="200" height="20" uuid="3e3064e8-238c-498e-8d32-018939593987"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{level}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="270" width="200" height="20" uuid="217b1e0d-c97c-496f-b19d-76ab238cce6d"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{scoredDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="301" width="140" height="20" uuid="ca7814d5-57b5-4adb-8fe4-afebacee7a89"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Giải thích về điểm tín dụng:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="321" width="100" height="35" uuid="a57e9008-0513-475a-a9be-46257f00c5fd"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Mức độ rủi ro 
+(Hạng)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="356" width="100" height="20" uuid="600e0c49-044b-4ae7-9438-88d89474b0ef"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[01]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="376" width="100" height="20" uuid="a4212185-413e-4c91-81a0-2a889e3607a4"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[02]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="416" width="100" height="20" uuid="e7019623-de96-47a4-8d44-24ca0556b16f"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[04]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="436" width="100" height="20" uuid="0c92c1d1-ca72-4892-b2e5-409de85f50b9"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[05]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="396" width="100" height="20" uuid="a3ecc0f8-f0ba-4683-a3d0-6e8da49c76eb"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[03]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="416" width="280" height="20" uuid="65fe237d-11ea-4e33-b19a-48736a13d736"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Từ 610 đến 634]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="436" width="280" height="20" uuid="0db9ec0d-c4f5-42cd-8beb-e01a14ed571d"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Từ 560 đến 609]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="356" width="280" height="20" uuid="55a2a769-06f1-4f8c-8c9b-20e3e8fcde5f"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Từ 710 đến 999]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="376" width="280" height="20" uuid="517547ce-0d83-4081-a6ce-45654cb349e1"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Từ 680 đến 709]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="321" width="280" height="35" uuid="0a74bcbc-aa0b-4932-84cc-f6e78aa1e12b"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Điểm tín dụng]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="396" width="280" height="20" uuid="fa923645-e106-4996-a7d7-5e6595607dcc"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Từ 635 đến 679]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="321" width="140" height="35" uuid="fc8a0f5f-a4b2-43ed-be31-2a6af8212080"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Điểm tín dụng:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="356" width="140" height="100" uuid="64e6ab1c-d432-49fa-b054-1b412d5478da"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Hạng thấp - Mức độ rủi ro thấp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="456" width="140" height="154" uuid="dc5105a9-72c2-4e43-8c4b-1339cb8a4447"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Hạng cao - Mức độ rủi ro cao]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="516" width="100" height="34" uuid="43e07a14-5a95-46f0-868f-5b462b10ff70"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[09]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="550" width="100" height="30" uuid="1f74b457-6603-4fae-aee5-e77b2162cbff"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[10]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="456" width="100" height="20" uuid="60cba895-2180-479e-990b-b99985daf9a5"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[06]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="496" width="280" height="20" uuid="abe04c0c-688c-417c-ad88-dcb66a81d796"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Từ 01 đến 419]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="476" width="100" height="20" uuid="3242aeea-925d-4cac-9a5c-a7da05a7a6f6"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[07]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="456" width="280" height="20" uuid="e41feac3-4f4d-486f-8b0c-954fa7fc5714"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Từ 520 đến 559]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="496" width="100" height="20" uuid="3be77948-5274-4533-ab55-103eca523bcd"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[08]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="550" width="280" height="30" uuid="9fdaf66d-8942-48e1-982c-9109f2f8d4b7"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Khách hàng hiện có nợ thuộc nhóm Nợ nghi ngờ hoặc có dư nợ thẻ quá hạn từ 180 - 364 ngày]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="516" width="280" height="34" uuid="f58f6dca-4557-418e-a24f-9673467a0067"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Khách hàng hiện có nợ thuộc nhóm Nợ dưới tiêu chuẩn hoặc có dư nợ thẻ quá hạn từ 90 - 179 ngày]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="476" width="280" height="20" uuid="72f460f9-4a15-4e92-8fe3-2a3d6d0a67b0"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Từ 420 đến 519]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="580" width="100" height="30" uuid="7588355d-cb86-4df6-ac1d-3b3b5393ced6"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[11]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="580" width="280" height="30" uuid="0f8d2b5d-f1d2-4944-b298-690f3733c9d7"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Khách hàng hiện có nợ thuộc nhóm Nợ có khả năng mất vốn hoặc có dư nợ thẻ quá hạn quá 365 ngày]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="651" width="100" height="30" uuid="9a8c7c5a-419a-4d3b-a8ca-a4f1c82b1169"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[04_T]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="681" width="100" height="30" uuid="d1cdc99e-2dce-43cd-9149-0468ad935590"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[05_T]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="681" width="280" height="30" uuid="e9f247c4-d787-4efd-a511-187d54127353"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Khách hàng không phát sinh dư nợ và dư nợ thẻ trong vòng 36 tháng và có độ tuổi từ 18-34]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="617" width="100" height="34" uuid="0ab0b112-6e0d-4c87-ad77-98f4bb0aea48"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="617" width="280" height="34" uuid="1277eb20-59e7-4fa6-8a2a-a10f924b7681"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[-Khách hàng không có thông tin về tuổi
+-Khách hàng nằm ngoài độ tuổi từ 18 đến 69]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="651" width="280" height="30" uuid="ee4136fe-b631-4f33-b939-0500d4ccf22f"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Khách hàng không phát sinh dư nợ và dư nợ thẻ trong vòng 36 tháng và có độ tuổi từ 35-69]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="617" width="140" height="94" uuid="77afd34c-9bce-4220-993c-5e9d1bbd3b2f"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Khách hàng không có đủ thông tin để đnhá giá mức độ rủi ro]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<summary>
+		<band height="65" splitType="Stretch">
+			<textField>
+				<reportElement x="475" y="40" width="100" height="20" uuid="da788e4b-f2b3-47ee-9692-ceaf592a4924"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

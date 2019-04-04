@@ -1,0 +1,67 @@
+<div class="container">
+    <div class="card card-body">
+        <h3 id="jhi-bill-heading">Thông tin đơn hàng của bạn</h3>
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label class="form-control-label" for="field_name">Tên đơn hàng</label>
+                <input type="text" class="form-control" name="name" id="field_name" readonly
+                       [(ngModel)]="bill.name" placeholder="VD: Đơn hàng ngày 01/02/2018"/>
+            </div>
+            <div class="form-group col-md-4">
+                <label class="form-control-label" for="field_name">Tên đơn hàng</label>
+                <input type="text" class="form-control" name="name" id="field_name" readonly
+                       [(ngModel)]="bill.name" placeholder="VD: Đơn hàng ngày 01/02/2018"/>
+            </div>
+            <div class="form-group col-md-3">
+                <label class="form-control-label" for="field_nhaMang">Nhà mạng</label>
+                <select class="form-control" name="nhaMang" [(ngModel)]="bill.type" id="field_nhaMang" required readonly>
+                    <option value=""></option>
+                    <option value="VTT">VIETTEL</option>
+                    <option value="VNP">VINA</option>
+                    <option value="VMS">MOBI</option>
+                </select>
+            </div>
+            <div class="form-group col-md-3">
+                <label class="form-control-label" for="field_amount">Tổng tiền</label>
+                <input type="text" class="form-control" name="amount" id="field_amount"
+                       [(ngModel)]="bill.amount" min="0" jhiMin="0" readonly hgCurrencyMask/>
+            </div>
+        </div>
+    </div>
+    <div class="card mt-4">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h5>Danh sách thẻ nạp</h5>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="demandCharges">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th><span>Mã thẻ</span></th>
+                    <th><span>Serial</span></th>
+                    <th><span>Mệnh giá</span></th>
+                    <th><span>Giá trị thực</span></th>
+                    <th><span>Trạng thái nạp</span></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let demand of demandCharges">
+                    <td>{{demand.code}}</td>
+                    <td>{{demand.serial}}</td>
+                    <td>{{demand.inputValue | pointReplacer}}</td>
+                    <td>{{demand.realValue | pointReplacer}}</td>
+                    <td>{{demand.status === 0 ? 'Đợi nạp' : demand.status === 1 ? 'Nạp thành công' : demand.status === 2 ? 'Nạp lỗi' : 'Nạp thành công(lỗi)'}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="mt-4">
+        <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+            <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Quay lại</span>
+        </button>
+    </div>
+</div>

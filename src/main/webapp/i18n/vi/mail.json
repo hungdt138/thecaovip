@@ -1,0 +1,24 @@
+{
+    "cicbApp": {
+        "mail": {
+            "home": {
+                "title": "Danh sách mail hệ thống",
+                "fromDate": "Từ ngày",
+                "toDate": "đến ngày",
+                "status": "Trạng thái",
+                "toMail": "Mail người nhận",
+                "reply": "Gửi lại mail",
+                "replyDate": "Ngày gửi",
+                "theme": "Chủ đề",
+                "all": "Tất cả",
+                "status1": "Chưa gửi",
+                "status2": "Đã gửi",
+                "status3": "Gửi lỗi",
+                "status4": "Mail chờ gửi lại",
+                "success": "Gửi mail thành công",
+                "notMail": "Bạn cần phải chọn một mail để gửi !",
+                "notDelete": "Bạn cần chọn một bản ghi để "
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "reset": {
+        "request": {
+            "title": "Reset your password",
+            "form": {
+                "button": "Reset password",
+                "back": "Quay lại",
+                "send": "Gửi"
+            },
+            "messages": {
+                "info": "Enter the email address you used to register",
+                "success": "Check your emails for details on how to reset your password.",
+                "notfound": "Email address isn't registered! Please check and try again"
+            },
+            "sendOtp": {
+                "info": "Enter phone number you used to register",
+                "success": "Check your index for details on how to reset your password.",
+                "notfound": "Phone number isn't registered! Please check and try again"
+            },
+            "resetByEmail": "Send email",
+            "resetByOtp": "Send OTP code",
+            "otpCode": "Mã OTP"
+        },
+        "finish" : {
+            "title": "Reset password",
+            "form": {
+                "button": "Validate new password",
+                "otpCode": "OTP code"
+            },
+            "messages": {
+                "info": "Choose a new password",
+                "success": "Your password has been reset",
+                "keymissing": "The reset key is missing.",
+                "errorEmail": "Your password couldn't be reset. Remember a password request is only valid for 24 hours.",
+                "errorOtp": "Không thể đặt lại mật khẩu của bạn. Mã OTP không hiệu lực."
+            }
+        }
+    }
+}

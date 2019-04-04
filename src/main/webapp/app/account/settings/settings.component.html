@@ -1,0 +1,51 @@
+<div class="card">
+    <div class="card-body">
+        <div>
+            <h2 *ngIf="settingsAccount">Thay đổi thông tin <b>{{settingsAccount.login}}</b></h2>
+            <h3 *ngIf="settingsAccount">Số tiền: {{settingsAccount.amount | pointReplacer}}, Số tiền khả dụng: {{settingsAccount.availableAmount | pointReplacer}}</h3>
+            <form name="form" role="form" (ngSubmit)="save()" #settingsForm="ngForm" *ngIf="settingsAccount" novalidate>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="fullName">Họ và tên</label>
+                    <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Nhập họ và tên của bạn"
+                           [(ngModel)]="settingsAccount.fullName" minlength=1 maxlength=50 #fullNameInput="ngModel" required>
+                    <div *ngIf="fullNameInput.dirty && fullNameInput.invalid">
+                        <small class="form-text text-danger"
+                               *ngIf="fullNameInput.errors.required">
+                            Trường này bắt buộc nhập
+                        </small>
+                        <small class="form-text text-danger"
+                               *ngIf="fullNameInput.errors.minlength">
+                            Họ và tên phải chưa ít nhất 4 ký tự
+                        </small>
+                        <small class="form-text text-danger"
+                               *ngIf="fullNameInput.errors.maxlength">
+                            Họ và tên không dài quá 50 ký tự
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="phoneNumber">Số điện thoại</label>
+                    <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Nhập số điện thoại của bạn"
+                           [(ngModel)]="settingsAccount.phoneNumber" minlength=10 maxlength=10 #phoneNumberInput="ngModel" required>
+                    <div *ngIf="phoneNumberInput.dirty && phoneNumberInput.invalid">
+                        <small class="form-text text-danger"
+                               *ngIf="phoneNumberInput.errors.required">
+                            Trường này bắt buộc nhập
+                        </small>
+                        <small class="form-text text-danger"
+                               *ngIf="phoneNumberInput.errors.minlength">
+                            Số điện thoại phải chưa ít nhất 10 ký tự
+                        </small>
+                        <small class="form-text text-danger"
+                               *ngIf="phoneNumberInput.errors.maxlength">
+                            Số điện thoại không dài quá 11 ký tự
+                        </small>
+                    </div>
+                </div>
+                <button type="submit" [disabled]="settingsForm.form.invalid" class="btn btn-primary">Cập nhật</button>
+            </form>
+        </div>
+    </div>
+
+</div>

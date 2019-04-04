@@ -1,0 +1,32 @@
+{
+    "userTctd": {
+        "home": {
+            "title": "Danh sách người dùng hệ thống của TCTD"
+        },
+        "accountLocked": "Cập nhật thông tin người dùng thành công",
+        "resetPasswordSuccess": "Đổi mật khẩu thành công",
+        "stt": "STT",
+        "userName": "Tên DN",
+        "fullName": "Họ tên",
+        "phoneNumber": "Số điện thoại",
+        "email": "Email",
+        "status": "Trạng thái",
+        "role": "Vai trò",
+        "action": "Thao tác",
+        "totalCount": "Tổng số: {{param}}",
+        "deactivated": "Ngưng hoạt động",
+        "activated": "Đang hoạt động",
+        "bank": "TCTD",
+        "branch": "Chi nhánh",
+        "province": "Tỉnh thành",
+        "district": "Quận/ Huyện",
+        "error": {
+            "dataNull": "Chưa chọn dữ liệu",
+            "NOT_FOUND": "Không tìm thấy thông tin người dùng"
+        },
+        "actions": {
+            "changePassword": "Đổi mật khẩu",
+            "lockAccount": "Khóa tài khoản"
+        }
+    }
+}

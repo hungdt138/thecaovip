@@ -1,0 +1,49 @@
+
+{
+    "cicbApp": {
+        "interestRate" : {
+            "home": {
+                "title": "Interest Rates",
+                "titleCompare": "SO SÁNH LÃI SUẤT TIẾT KIỆM",
+                "createLabel": "Create a new Interest Rate",
+                "createOrEditLabel": "Create or edit a Interest Rate"
+            },
+            "created": "A new Interest Rate is created with identifier {{ param }}",
+            "updated": "A Interest Rate is updated with identifier {{ param }}",
+            "deleted": "A Interest Rate is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Interest Rate {{ id }}?"
+            },
+            "detail": {
+                "title": "Interest Rate"
+            },
+            "noTerm": "No Term",
+            "noTerm2":"Không kỳ hạn",
+            "oneMonth": "One Month",
+            "twoMonth": "Two Month",
+            "threeMonth": "Three Month",
+            "sixMonth": "Six Month",
+            "twelveMonth": "Twelve Month",
+            "thirteenMonth": "Thirteen Month",
+            "twentyFourMonth": "Twenty Four Month",
+            "threeSixMonth": "Three Six Month",
+            "status": "Status",
+            "nineMonth": "Nine Month",
+            "message": {
+                "createError": "Tạo mới thất bại",
+                "createSuccess": "Đã thêm mới lãi suất thành công",
+                "updateSuccess": "Đã cập nhật thành công",
+                "updateError": "Cập nhật thất bại",
+                "deleteError": "Xóa thất bại",
+                "deleteSuccess": "Xóa thành công",
+                "dataNullError": "Không được để trống tất cả các trường"
+            },
+            "btn": {
+                "create": "Thêm mới",
+                "update": "Cập nhật",
+                "cancle": "Hủy bỏ"
+            },
+            "acction": "Thao tác"
+        }
+    }
+}

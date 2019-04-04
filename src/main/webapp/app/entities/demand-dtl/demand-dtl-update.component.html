@@ -1,0 +1,48 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-demand-dtl-heading">Create or edit a Demand Dtl</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!demandDtl.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="demandDtl.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_denomination">Denomination</label>
+                    <select class="form-control" name="price" [(ngModel)]="demandDtl.price" id="field_denomination" >
+                        <option value="DENO10">DENO10</option>
+                        <option value="DENO20">DENO20</option>
+                        <option value="DENO50">DENO50</option>
+                        <option value="DENO100">DENO100</option>
+                        <option value="DENO200">DENO200</option>
+                        <option value="DENO500">DENO500</option>
+                        <option value="DENO1000">DENO1000</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_quantity">Quantity</label>
+                    <input type="number" class="form-control" name="quantity" id="field_quantity"
+                        [(ngModel)]="demandDtl.quantity" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_demand">Demand</label>
+                    <select class="form-control" id="field_demand" name="demand" [(ngModel)]="demandDtl.demand" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="demandOption.id === demandDtl.demand?.id ? demandDtl.demand : demandOption" *ngFor="let demandOption of demands; trackBy: trackDemandById">{{demandOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

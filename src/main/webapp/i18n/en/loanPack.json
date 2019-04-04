@@ -1,0 +1,29 @@
+
+{
+    "cicbApp": {
+        "loanPack" : {
+            "home": {
+                "title": "Loan Packs",
+                "createLabel": "Create a new Loan Pack",
+                "createOrEditLabel": "Create or edit a Loan Pack"
+            },
+            "created": "A new Loan Pack is created with identifier {{ param }}",
+            "updated": "A Loan Pack is updated with identifier {{ param }}",
+            "deleted": "A Loan Pack is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Loan Pack {{ id }}?"
+            },
+            "detail": {
+                "title": "Loan Pack"
+            },
+            "code": "Code",
+            "name": "Name",
+            "description": "Description",
+            "parentId": "Parent Id",
+            "error": {
+                "deleteError01": "Không xóa được gói vay vì đã được sử dụng bởi nhu cầu vay",
+                "deleteError02": "Không xóa được gói vay vì đã được sử dụng bởi chi tiết gói vay"
+            }
+        }
+    }
+}

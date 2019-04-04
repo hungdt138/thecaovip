@@ -1,0 +1,27 @@
+
+{
+    "cicbApp": {
+        "demandResponse" : {
+            "home": {
+                "title": "Demand Responses",
+                "createLabel": "Create a new Demand Response",
+                "createOrEditLabel": "Create or edit a Demand Response"
+            },
+            "created": "A new Demand Response is created with identifier {{ param }}",
+            "updated": "A Demand Response is updated with identifier {{ param }}",
+            "deleted": "A Demand Response is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Demand Response {{ id }}?"
+            },
+            "detail": {
+                "title": "Demand Response"
+            },
+            "content": "Content",
+            "type": "Demand",
+            "user": "User",
+            "createdDate": "Demand Date",
+            "demand": "Demand",
+            "responseNotFound": "Response Not Found"
+        }
+    }
+}

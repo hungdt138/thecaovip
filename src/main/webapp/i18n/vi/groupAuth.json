@@ -1,0 +1,23 @@
+
+{
+    "cicbApp": {
+        "groupAuth" : {
+            "home": {
+                "title": "Danh Sách Nhóm Xác Thực ",
+                "createLabel": "Thêm Mới Một Nhóm Xác Thực ",
+                "createOrEditLabel": "Thêm Mới Hoặc Cập Nhật Nhóm Xác Thực"
+            },
+            "created": "Thêm mới nhóm xác thực {{ param }} thành công",
+            "updated": "Cập nhật nhóm xác thực {{ param }} thành công",
+            "deleted": "Xóa nhóm xác thực {{ param }} thành công",
+            "delete": {
+                "question": "Bạn có chắc là muốn xóa xác thực nhóm {{ id }}?"
+            },
+            "detail": {
+                "title": "Nhóm Xác Thực "
+            },
+            "authority": "Ủy Quyền",
+            "groups": "Nhóm"
+        }
+    }
+}

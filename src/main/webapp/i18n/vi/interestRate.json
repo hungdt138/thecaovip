@@ -1,0 +1,49 @@
+
+{
+    "cicbApp": {
+        "interestRate" : {
+            "home": {
+                "title": "CẬP NHẬT THÔNG TIN LÃI SUẤT TIẾT KIỆM",
+                "titleCompare": "SO SÁNH LÃI SUẤT TIẾT KIỆM",
+                "createLabel": "Thêm mới một Interest Rate",
+                "createOrEditLabel": "Thêm mới hoặc cập nhật Interest Rate"
+            },
+            "created": "Một Interest Rate mới được tạo với định danh {{ param }}",
+            "updated": "Một Interest Rate cập nhật với định danh {{ param }}",
+            "deleted": "Một Interest Rate đã xóa với định danh {{ param }}",
+            "delete": {
+                "question": "Bạn có chắc là muốn xóa Interest Rate {{ id }}?"
+            },
+            "detail": {
+                "title": "Interest Rate"
+            },
+            "noTerm": "KKH",
+            "noTerm2":"Không kỳ hạn",
+            "oneMonth": "1 tháng",
+            "twoMonth": "2 tháng",
+            "threeMonth": "3 tháng",
+            "sixMonth": "6 tháng",
+            "twelveMonth": "12 tháng",
+            "thirteenMonth": "13 tháng",
+            "twentyFourMonth": "24 tháng",
+            "threeSixMonth": "36 tháng",
+            "status": "Status",
+            "nineMonth": "9 tháng",
+            "message": {
+                "createError": "Tạo mới thất bại",
+                "createSuccess": "Đã thêm mới lãi suất thành công",
+                "updateSuccess": "Đã cập nhật thành công",
+                "updateError": "Cập nhật thất bại",
+                "deleteError": "Xóa thất bại",
+                "deleteSuccess": "Xóa thành công",
+                "dataNullError": "Không được để trống tất cả các trường"
+            },
+            "btn": {
+                "create": "Thêm mới",
+                "update": "Cập nhật",
+                "cancle": "Hủy bỏ"
+            },
+            "acction": "Thao tác"
+        }
+    }
+}

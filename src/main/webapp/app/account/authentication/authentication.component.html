@@ -1,0 +1,56 @@
+<div *ngIf="!isAuth">
+    <div class="card">
+        <div class="card-body">
+            <div class="row" >
+                <div class="col-md-4">
+                    <p>Hãy quét QR code này</p>
+                    <img [src]="imageToShow"/>
+                </div>
+                <div class="col-md-8">
+                    <h1>Mã bảo mật của bạn:</h1>
+                    <h3>{{twoFa.privateKey}}</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    Lưu ý: Hãy lưu lại mã bảo mật bằng cách chụp hoặc ghi lại mã bảo mật, trong trường hợp mất hoặc hỏng điện thoại của thể tạo lại mã bảo mật 2 lớp ở trên máy khác bảng mã bảo mật này
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card m-t-10">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="code">Nhập password để xác nhận</label>
+                    <input type="text" name="code" id="code" class="form-control" [(ngModel)]="code"/>
+                </div>
+                <div class="col-md-4">
+                    <label>&nbsp;</label>
+                    <div>
+                        <button class="btn btn-success" (click)="confirm2fa()" [disabled]="!code">Xác nhận</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="isAuth">
+    <div class="card m-t-10">
+        <div class="card-body">
+            <p>Bảo mật 2 lớp đã được cài đặt, để hủy bảo mật 2 lớp vui lòng nhâp OTP</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="code2">Mã OTP</label>
+                    <input type="text" name="code2" id="code2" class="form-control" [(ngModel)]="code"/>
+                </div>
+                <div class="col-md-4">
+                    <label>&nbsp;</label>
+                    <div>
+                        <button class="btn btn-success" (click)="cancel2fa()" [disabled]="!code">Xác nhận</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

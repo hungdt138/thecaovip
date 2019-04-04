@@ -1,0 +1,145 @@
+<div>
+    <div class="card">
+        <form name="editForm" role="form" class="card-body">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link" [ngClass]="{'active' : this.bill.chargeType === 1}" (click)="changeHighPriority(1)">Nạp thẻ trả trước</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [ngClass]="{'active' : this.bill.chargeType === 2}" (click)="changeHighPriority(2)">Nạp thẻ trả sau</a>
+                </li>
+            </ul>
+            <h3 id="jhi-bill-heading">Thông tin đơn hàng</h3>
+            <div class="row">
+                <div class="form-group col-md-9">
+                        <label class="form-control-label">Chọn file</label>
+                    <div class="input-group mb-2">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="cost" name="file" (change)="fileChange($event)"
+                                   accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+                            <label class="custom-file-label" for="cost">{{file.name}}</label>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="form-group col-md-3">-->
+                    <!--<label class="form-control-label" for="field_sheet">Chọn sheet</label>-->
+                    <!--<select class="form-control" name="sheet" [(ngModel)]="sheet" id="field_sheet" required-->
+                        <!--[disabled]="sheets.length === 0">-->
+                        <!--<option [ngValue]="sheet" *ngFor="let sheet of sheets;">{{sheet.name}}</option>-->
+                    <!--</select>-->
+                <!--</div>-->
+                <div class="form-group col-md-3 text-right">
+                    <label class="form-control-label" for="field_nhaMang">&nbsp;</label>
+                    <div>
+                        <!--<button type="button" class="btn btn-success" (click)="readFile()" [disabled]="!sheet">Đọc file</button>-->
+                        <button type="button" class="btn btn-success" (click)="readFile()" >Đọc file</button>
+                    </div>
+                </div>
+                <div class="form-group col-md-3">
+                    <label class="form-control-label" for="field_name">Tên đơn hàng</label>
+                    <input type="text" class="form-control" name="name" id="field_name"
+                           [(ngModel)]="bill.name" placeholder="VD: Đơn hàng ngày 01/02/2018"/>
+                </div>
+                <div class="form-group col-md-3">
+                    <label class="form-control-label" for="field_nhaMang">Nhà mạng</label>
+                    <select class="form-control" name="nhaMang" [(ngModel)]="bill.type" id="field_nhaMang" required>
+                        <option value="VTT">VIETTEL</option>
+                        <option value="VNP">VINA</option>
+                        <option value="VMS">MOBI</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label class="form-control-label" for="field_amount">Tổng tiền</label>
+                    <input type="text" class="form-control" name="amount" id="field_amount"
+                        [(ngModel)]="bill.amount" min="0" jhiMin="0" readonly hgCurrencyMask/>
+                </div>
+                <div class="form-group col-md-2" *ngIf="this.bill.chargeType === 2">
+                    <label class="form-control-label">&nbsp;</label>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1" name="moreFee" [(ngModel)]="bill.moreFee">
+                        <label class="custom-control-label" for="customCheck1">Nạp chọn mệnh giá</label>
+                    </div>
+                </div>
+                <div class="form-group col-md-2" *ngIf="this.bill.chargeType === 2">
+                    <label class="form-control-label">&nbsp;</label>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck2" name="moreFee2" [(ngModel)]="bill.highPriority">
+                        <label class="custom-control-label" for="customCheck2">Ưu tiên đơn hàng</label>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="card-footer">
+            <p>
+                Nạp chọn mệnh giá: chúng tôi sẽ chọn các mệnh giá cáo nhất để nạp cho khách hàng của bạn.
+                <br/>
+                VD: nạp 700k => sẽ nạp 1 thẻ 500k và 200, nếu không tích chọn có thể sẽ là nạp 7 thẻ 100k.
+                <br/>
+                Ưu tiên đơn hàng: Đơn hàng của bạn sẽ được nạp nhanh hơn các hơn hàng không ưu tiên!
+            </p>
+        </div>
+    </div>
+    <div class="card mt-4">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h5>Danh sách đơn hàng đã import</h5>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="demands">
+            <div *ngIf="demands">
+                <table class="table" *ngIf="demands.length !== 0">
+                    <thead>
+                    <tr>
+                        <th><span>Tên người nạp</span></th>
+                        <th><span>Tài khoản nạp</span></th>
+                        <th><span>Số tiền</span></th>
+                        <th><span>Loại dịch vụ</span></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let demand of demands">
+                        <td>{{demand.name}}</td>
+                        <td>{{demand.account}}</td>
+                        <td>{{(demand.amount | pointReplacer)}}</td>
+                        <td>{{demand.serviceType === 1 ? 'Di động -Dcom, PSTN(Số cố định)': 'ADSL/FTTH/NEXTTV'}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <table class="table" *ngIf="demands.length === 0">
+                    <tbody>
+                    <tr *ngIf="demands.length === 0">
+                        <td class="text-center">Danh sách nạp đang trống, mời bạn thêm mới</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="m-b-10 m-l-10">
+            <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Hủy</span>
+            </button>
+            <button type="submit" id="save-entity" class="btn btn-primary" (click)="save()" [disabled]="!demands || !demands.length || !bill.type">
+                <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Xác nhận đơn hàng</span>
+            </button>
+        </div>
+    </div>
+</div>
+<swal #success
+      title="Chúc mừng bạn"
+      type="success"
+      text="Thêm mới đơn hàng thành công"
+      [showConfirmButton]="true"
+      [showCancelButton]="false"
+      (confirm)="previousState()">
+</swal>
+<swal #errorSwal
+      title="Có lỗi sảy ra"
+      type="error"
+      [showConfirmButton]="false"
+      [showCancelButton]="true">
+    <div *swalPartial class="alert alert-info">
+        <strong>{{ errorMessage }}</strong>
+    </div>
+</swal>

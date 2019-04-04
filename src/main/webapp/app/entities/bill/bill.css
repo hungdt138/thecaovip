@@ -1,0 +1,9 @@
+.nhamang img {
+    max-width: 200px;
+    border: 1px solid #00dbde;
+    border-radius: 10px;
+    padding: 10px;
+}
+.pointer {
+    cursor: pointer;
+}

@@ -1,0 +1,21 @@
+{
+    "systemHistory": {
+        "title": "Lịch sử truy cập hệ thống",
+        "userName": "Tên đăng nhập",
+        "date": "Thời gian",
+        "fromDate": "Từ ngày",
+        "toDate": "Đến ngày",
+        "totalCount": "Tổng số: {{param}}",
+        "stt": "STT",
+        "desktopName": "Tên máy tính",
+        "ipAddress": "Địa chỉ IP",
+        "module": "Phân hệ thao tác",
+        "action": {
+            "title": "Thao tác",
+            "AUTHENTICATION_SUCCESS": "Đăng nhập",
+            "AUTHENTICATION_FAILURE": "Đăng xuất",
+            "AUTHORIZATION_FAILURE": "Đăng xuất",
+            "AUTHENTICATION_SWITCH": "Đăng nhập tự động"
+        }
+    }
+}

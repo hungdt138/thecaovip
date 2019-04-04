@@ -1,0 +1,39 @@
+
+{
+    "cicbApp": {
+        "pairing" : {
+            "home": {
+                "title": "Danh Sách Đã Ghép Cặp",
+                "createLabel": "Thêm Mới Một Pairing",
+                "createOrEditLabel": "Thêm Mới Hoặc Cập Nhật Pairing"
+            },
+            "created": "Thêm mới Pairing {{ param }} thành công",
+            "updated": "Cập nhật Pairing {{ param }} thành công",
+            "deleted": "Xóa Pairing {{ param }} thành công",
+            "delete": {
+                "question": "Bạn có chắc là muốn xóa Pairing {{ id }}?"
+            },
+            "detail": {
+                "title": "Pairing"
+            },
+            "customerInfo": "Thông Tin Khách Hàng",
+            "status": {
+                "title": "Trạng thái",
+                "sending": "Đang tìm kiếm",
+                "creditOfficerAccept": "Cán bộ chấp nhận",
+                "creditOfficerAcceptCancel": "Cán bộ từ chối",
+                "customerCancel": "Khách hàng hủy"
+            },
+            "rate": "Đánh Giá",
+            "creditOfficerInfo": "Thông Tin Cán Bộ Tín Dụng",
+            "acceptanceCount": "Chấp Nhận Yêu Cầu",
+            "pairingCount": "Ghép cặp",
+            "creditOfficer": "Cán Bộ Tín Dụng",
+            "customer": "Khách Hàng",
+            "demand": "Nhu Cầu",
+            "amount": "Số Tiền",
+            "period": "Thời Hạn Vay",
+            "loanPack": "Gói Vay"
+        }
+    }
+}

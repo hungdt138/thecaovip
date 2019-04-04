@@ -1,0 +1,115 @@
+{
+    "cicbApp": {
+        "sidebar" : {
+            "home": "Trang chủ",
+            "user": "Người dùng",
+            "groupAuth": "Nhóm quyền",
+            "demand": "Nhu cầu vay",
+            "demand.customer": "KH thể nhân",
+            "demand.enterprise": "KH pháp nhân",
+            "card": "Nhu cầu thẻ",
+            "creditCardDemand": "Thẻ tín dụng",
+            "creditCardDemand.notConnect": "DS chờ kết nối",
+            "creditCardDemand.connected": "DS đã kết nối",
+            "debitCardDemand": "Thẻ ghi nợ",
+            "category": "Sản phẩm tín dụng",
+            "category.loan": "Vay vốn",
+            "category.card": "Mở thẻ",
+            "category.interest": "Lãi suất",
+            "service": "Dịch vụ ưu tiên",
+            "service.register.loan": "Ưu tiên gói vay",
+            "service.register.card": "Ưu tiên gói thẻ",
+            "service.registered": "Gói dịch vụ đã đăng ký",
+            "ads": "Dịch vụ quảng cáo",
+            "ads.register": "Đăng ký quảng cáo",
+            "ads.registered": "Quảng cáo đã đăng ký",
+            "ads.createContent": "Tạo quảng cáo",
+            "card.notConnect": "Chưa kết nối",
+            "card.connected": "Đã kết nối",
+            "statistic": {
+                "title": "Thống kê",
+                "loan.customer": "Nhu cầu vay thể nhân",
+                "loan.enterprise": "Nhu cầu vay pháp nhân",
+                "card.customer": "Nhu cầu thẻ thể nhân",
+                "card.enterprise": "Nhu cầu thẻ pháp nhân"
+            },
+            "loan.customer": {
+                "title": "Quản lý khách hàng vay"
+            },
+            "bank": "Tổ chức tín dụng",
+            "ad": {
+                "title": "Dịch vụ Quảng cáo",
+                "pack": "Ưu tiên gói tín dụng",
+                "pack.list": "DS gói dịch vụ ưu tiên TD",
+                "pack.regis": "DS đăng ký dịch vụ gói ưu tiên",
+                "service": "Dịch vụ quảng cáo tín dụng",
+                "service.pack": "DS gói quảng cáo TD",
+                "service.regis": "DS đăng ký dịch vụ quảng cáo"
+            },
+            "report": {
+                "title": "Báo cáo",
+                "loan": "Báo cáo nhu cầu vay",
+                "loan.customer": "Nhu cầu vay KH thể nhân",
+                "loan.enterprise": "Nhu cầu vay KH pháp nhân",
+                "card": "Báo cáo nhu cầu thẻ tín dụng",
+                "card.credit": "Nhu cầu mở thẻ tín dụng",
+                "card.debit": "Nhu cầu mở thẻ ghi nợ",
+                "remake": "Tạo lập lại báo cáo",
+                "regis": "Đăng ký Tài khoản ND của TCTD",
+                "loan.accepted": "Nhu cầu vay được đáp ứng",
+                "card.accepted": "Nhu cầu thẻ được đáp ứng"
+            },
+            "support": "Hỗ trợ trực tuyến",
+            "system": {
+                "title": "Hệ thống",
+                "user": "Người dùng hệ thống",
+                "cic.list": "Người dùng CIC",
+                "bank.list": "Người dùng TCTD",
+                "customer.list": "Khách hàng vay",
+                "authgroup": "Nhóm quyền",
+                "history": "Lịch sử truy cập hệ thống",
+                "mail.list": "Danh sách mail hệ thống"
+            },
+            "advertise": {
+                "search": "Từ khóa tìm kiếm",
+                "status": "Trạng thái duyệt NDQC",
+                "wait": "Chờ duyệt",
+                "accepted": "Đồng ý",
+                "rejected": "Từ chối",
+                "all": "Tất cả",
+                "newAdd": "Tạo quảng cáo",
+                "title": "Danh sách nội dung quảng cáo đã tạo",
+                "adPackTitle": "Tên gói QC",
+                "adTitle": "Tiêu đề",
+                "img": "Ảnh",
+                "display": "Hiển thị",
+                "description": "Mô tả",
+                "action": "Thao tác"
+            },
+            "catalog": {
+                "title": "Danh mục",
+                "credit": "Gói ưu tiên tín dụng",
+                "advertising": "Gói quảng cáo"
+            },
+            "advertisement" : {
+                "title": "Nhu cầu quảng cáo",
+                "loan": "Nhu cầu vay",
+                "card": "Nhu cầu thẻ",
+                "other": "Nhu cầu khác"
+            },
+            "approve": {
+                "title": "Duyệt tài khoản",
+                "registration": {
+                    "title": "Tài khoản tạo mới",
+                    "customer": "KH thể nhân",
+                    "enterprise": "KH pháp nhân"
+                },
+                "updateInfo": {
+                    "title": "Thay đổi thông tin",
+                    "customer": "KH thể nhân",
+                    "enterprise": "KH pháp nhân"
+                }
+            }
+        }
+    }
+}

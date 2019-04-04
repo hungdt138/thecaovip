@@ -1,0 +1,26 @@
+
+{
+    "cicbApp": {
+        "customerResponse" : {
+            "home": {
+                "title": "Phản hồi của các tổ chức tín dụng về khách hàng này",
+                "createLabel": "Thêm mới phản hồi",
+                "createOrEditLabel": "Thêm mới phản hồi"
+            },
+            "created": "Bạn đã tạo phản hồi cho khách hàng này thành công",
+            "updated": "Một Customer Response cập nhật với định danh {{ param }}",
+            "deleted": "Bạn đã xóa phản hồi thành công",
+            "delete": {
+                "question": "Bạn có chắc chắn muốn xóa phản hồi này không"
+            },
+            "detail": {
+                "title": "Customer Response"
+            },
+            "phoneNumber": "Số điện thoại",
+            "content": "Nội dung",
+            "status": "Status",
+            "bank": "Tổ chức tín dụng",
+            "createdDate": "Ngày phản hồi"
+        }
+    }
+}

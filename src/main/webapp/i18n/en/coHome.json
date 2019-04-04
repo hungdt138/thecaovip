@@ -1,0 +1,18 @@
+{
+    "cicbApp": {
+        "coHome" : {
+            "title": "Báo cáo theo",
+            "quarter": "Quý",
+            "month": "Tháng",
+            "day": "Ngày",
+            "loanTitle": "KH thể nhân",
+            "loanTitle2": "KH pháp nhân",
+            "viewDemand": "Xem nhu cầu",
+            "score": "Thứ hạng hiện tại",
+            "cardTitle": "Thẻ tín dụng",
+            "viewScore": "Xem chi tiết",
+            "date": "thời gian",
+            "analyze": "Phân tích"
+        }
+    }
+}

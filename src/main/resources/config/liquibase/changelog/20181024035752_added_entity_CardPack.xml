@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <property name="now" value="now()" dbms="h2"/>
+
+    <property name="now" value="sysdate" dbms="oracle"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle, mssql"/>
+
+    <!--
+        Added the entity CardPack.
+    -->
+    <changeSet id="20181024035752-1" author="jhipster">
+        <createTable tableName="cardpack">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="code" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="name" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="description" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="bankid" type="bigint">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="annualfee" type="decimal(21,3)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="interestfreetime" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="maximumlimit" type="decimal(21)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="createcardfee" type="decimal(21)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="withdrawalfee" type="decimal(21,3)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="withdrawaltype" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="incomerequired" type="decimal">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="imagect" type="varchar(50)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="image" type="blob">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="utilities" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="condition" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cardprofile" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cost" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="promotion" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="minincome" type="decimal">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="purpose" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="maxnumberofcard" type="varchar(50)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cardtype" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="customertype" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="status" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="lastmodifiedby" type="varchar(50)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="lastmodifieddate" type="timestamp(6)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="createdby" type="varchar(50)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="createddate" type="timestamp(6)">
+                <constraints nullable="true" />
+            </column>
+
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
+        </createTable>
+        
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here, do not remove-->
+</databaseChangeLog>

@@ -1,0 +1,63 @@
+<div class="card">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-lg-3">
+                <label for="code">Code</label>
+                <input type="text" class="form-control" [(ngModel)]="code" id="code" name="code"/>
+            </div>
+            <div class="col-lg-3">
+                <label for="serial">Serial</label>
+                <input type="text" class="form-control" [(ngModel)]="serial" id="serial" name="serial"/>
+            </div>
+            <div class="col-lg-3">
+                <label></label>
+                <div>
+                    <button class="btn btn-success" (click)="loadAll()">Tìm kiếm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card m-t-20">
+    <div class="card-header">
+        <h5 id="page-heading">
+            <span>Danh sách thẻ đã nhận</span>
+        </h5>
+    </div>
+    <div class="table-responsive" *ngIf="demandCharges">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+                <th jhiSortBy="inputValue"><span>Giá trị thẻ</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+                <th jhiSortBy="realValue"><span>Giá trị thật</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+                <th jhiSortBy="code"><span>Code</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+                <th jhiSortBy="serial"><span>Serial</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+                <th jhiSortBy="status"><span>Trạng thái</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+                <th jhiSortBy="created_date"><span>TG nhận đơn</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let demandCharge of demandCharges ;trackBy: trackId">
+                <td>{{demandCharge.inputValue  | pointReplacer}}</td>
+                <td>{{demandCharge.realValue  | pointReplacer}}</td>
+                <td>{{demandCharge.code}}</td>
+                <td>{{demandCharge.serial}}</td>
+                <!--<td style="word-wrap: break-word;">{{demandCharge.message}}</td>-->
+                <td>
+                    <span *ngIf="demandCharge.status === 0">Đợi nạp</span>
+                    <span *ngIf="demandCharge.status === 1">Nạp thành công</span>
+                    <span *ngIf="demandCharge.status === 2">Nạp lỗi</span>
+                    <span *ngIf="demandCharge.status === 3">Nạp lỗi lần đầu, lần 2 đã bị sử dụng</span>
+                </td>
+                <td>{{demandCharge.createdDate | date:'dd/MM/yyyy HH:mm:ss'}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="demandCharges && demandCharges.length">
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

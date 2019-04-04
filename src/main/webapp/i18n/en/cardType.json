@@ -1,0 +1,14 @@
+{
+    "cicbApp": {
+        "cardType" : {
+            "null": "",
+            "1": "Thẻ tiêu chuẩn",
+            "2": "Thẻ vàng",
+            "3": "Thẻ bạch kim",
+            "4": "Thẻ đồng thương hiệu",
+            "5": "Thẻ khác",
+            "debit": "Thẻ ghi nợ",
+            "credit": "Thẻ tín dụng"
+        }
+    }
+}

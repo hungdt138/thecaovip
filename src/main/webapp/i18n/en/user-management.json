@@ -1,0 +1,65 @@
+{
+    "userManagement": {
+        "home": {
+            "title": "Users",
+            "createLabel": "Create a new user",
+            "createOrEditLabel": "Create or edit a user"
+        },
+        "created": "A new user is created with identifier {{ param }}",
+        "updated": "An user is updated with identifier {{ param }}",
+        "deleted": "An user is deleted with identifier {{ param }}",
+        "delete": {
+            "question": "Are you sure you want to delete user {{ login }}?"
+        },
+        "detail": {
+            "title": "User"
+        },
+        "login": "Login",
+        "firstName": "First name",
+        "lastName": "Last name",
+        "email": "Email",
+        "activated": "Activated",
+        "deactivated": "Deactivated",
+        "profiles": "Profiles",
+        "langKey": "Language",
+        "createdBy": "Created by",
+        "createdDate": "Created date",
+        "lastModifiedBy": "Modified by",
+        "lastModifiedDate": "Modified date",
+        "authorization": {
+            "title": "User Authorization"
+        },
+        "status.active": "Hoạt động",
+        "status.deactive": "Ngừng hoạt động",
+        "status": "status",
+        "title2": "Danh sách nhân viên",
+        "fullName": "Họ tên",
+        "phoneNumber": "Số điện thoại",
+        "group": "Vai trò",
+        "resetPass": "Đặt lại mật khẩu",
+        "newPassword": "mật khẩu",
+        "confirmPassword": "Xác nhận mật khẩu",
+        "reset": "Đặt lại",
+        "error": {
+            "doNotMatch": "Hai mật khẩu không khớp nhau"
+        },
+        "success": "Đặt lại mật khẩu thành công",
+        "groupAuth.title": "Danh sách nhóm quyền",
+        "groupAuth.name": "Tên vai trò",
+        "groupAuth.description": "Mô tả",
+        "groupAuth.list": "Danh mục chức năng",
+        "groupAuth.add": "Thêm nhóm quyền",
+        "groupAuth.create.title": "Cập nhật nhóm quyền",
+        "groupAuth.success": "Cập nhật nhóm quyền thành công",
+        "groupAuth.manager": "Quản trị hệ thống",
+        "groupAuth.list.title": "Chọn menu truy cập cho vai trò",
+        "checkAll": "Chọn tất cả",
+        "groupAuth.update.success": "Cập nhật nhóm quyền thành công",
+        "groupAuth.list.title2": "Cập nhật quyền cho nhóm vai trò",
+        "groupUser": "Cập nhật nhóm quyền",
+        "groupUser.success": "Cập nhật nhóm quyền thành công",
+        "kickout": "Delete From Group",
+        "kickout.succes": "Delete user Success",
+        "kickout.failure": "Some things went wrong, cannot delete this user"
+    }
+}

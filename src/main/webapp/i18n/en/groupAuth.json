@@ -1,0 +1,23 @@
+
+{
+    "cicbApp": {
+        "groupAuth" : {
+            "home": {
+                "title": "Group Auths",
+                "createLabel": "Create a new Group Auth",
+                "createOrEditLabel": "Create or edit a Group Auth"
+            },
+            "created": "A new Group Auth is created with identifier {{ param }}",
+            "updated": "A Group Auth is updated with identifier {{ param }}",
+            "deleted": "A Group Auth is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Group Auth {{ id }}?"
+            },
+            "detail": {
+                "title": "Group Auth"
+            },
+            "authority": "Authority",
+            "groups": "Groups"
+        }
+    }
+}

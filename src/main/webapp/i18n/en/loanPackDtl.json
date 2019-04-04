@@ -1,0 +1,63 @@
+
+{
+    "cicbApp": {
+        "loanPackDtl" : {
+            "home": {
+                "title": "Danh Sách Chi Tiết Gói Vay",
+                "createLabel": "Thêm Mới Một Chi Tiết Gói Vay",
+                "createOrEditLabel": "Thêm Mới Hoặc Cập Nhật Chi Tiêt Gói Vay"
+            },
+            "created": "Thêm mới gói vay thành công",
+            "updated": "Cập nhật chi tiết gói vay {{ param }} thành công",
+            "deleted": "Xóa chi tiết gói vay {{ param }} thành công",
+            "delete": {
+                "question": "Bạn có chắc là muốn xóa chi tiết gói vay {{ id }}?"
+            },
+            "detail": {
+                "title": "Chi Tiết Gói Vay"
+            },
+            "maxPeriod": "Thời Gian Tối Đa",
+            "status": "Trạng Thái",
+            "description": "Ghi chú",
+            "interestRate": "Lãi Suất",
+            "interestRateFrom": "Lãi suất từ",
+            "interestRateTo": "Lãi suất đến",
+            "softLoan": "Vay Mềm",
+            "periodType": " tháng",
+            "loanApproveTime": "Thời gian duyệt vay",
+            "customerType": {
+                "title": "Loại khách hàng",
+                "customer": "Thể nhân",
+                "enterprise": "Pháp nhân"
+            },
+            "loanPack": "Loại vay",
+            "name": "Tên gói vay",
+            "maxLoan": "Số tiền vay tối đa",
+            "mortgagePercent": "% giá trị tài sản đảm bảo",
+            "billPercent": "% giá trị họp đồng mua",
+            "incentivePeriod": "Thời gian ưu đãi",
+            "gracePeriod": "Thời gian ân hạn",
+            "earlyRepaymentPunish": "Phạt trả nợ trước hạn",
+            "marginOfInterest": "Biên độ lãi",
+            "interestChangePeriod": "Thời gian thay đổi lãi xuất",
+            "conditionOfLoan": "Điều kiện vay",
+            "fileRequired": "Hồ sơ vay vốn",
+            "benefit": "Lợi ích",
+            "currency": {
+                "title": "Ngoại tệ",
+                "vnd": "Việt nam đồng",
+                "usd": "USD"
+            },
+            "period": {
+                "year": "Năm",
+                "month": "Tháng"
+            },
+            "error": {
+                "rate": "Lãi xuất từ phải nhỏ hơn lãi xuất đến"
+            },
+            "from": "Từ",
+            "to": "Đến",
+            "bankName": "TCTD"
+        }
+    }
+}

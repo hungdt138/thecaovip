@@ -1,0 +1,78 @@
+<div *ngIf="!isRegister" class="row">
+    <div class="card col-md-4 offset-4">
+        <div class="card-body">
+            <form name="editForm" role="form" novalidate (ngSubmit)="isRegister = true" #editForm="ngForm">
+                <h2 id="jhi-transaction-heading">Nạp tiền cho đại lý</h2>
+                <div>
+                    <h3>Số tiền hiện có của bạn: <span style="color: orangered">{{isAdmin ? 'Vô hạn' : amount | pointReplacer}}</span></h3>
+                    <div class="form-group">
+                        <label class="form-control-label" for="field_amount">Số tiền nạp</label>
+                        <input type="text" class="form-control" name="amount" id="field_amount"
+                            [(ngModel)]="transaction.amount" required hgCurrencyMask/>
+                        <div *ngIf="amount && transaction.amount > amount">
+                            <small class="form-text text-danger">
+                                Số tiền bạn muốn nạp cho đại lý không được vượt quá số tiền bạn hiện có
+                            </small>
+                        </div>
+                        <div *ngIf="transaction.amount && transaction.amount % 1000 !== 0">
+                            <small class="form-text text-danger">
+                                Số tiền cần chuyển phải là bội của 1.000 VND!
+                            </small>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label" for="field_toUser">Đại lý muốn nạp</label>
+                        <select class="form-control" id="field_toUser" name="toUser" [(ngModel)]="transaction.toUser" required>
+                            <option [ngValue]=" userOption"
+                                    *ngFor="let userOption of users; trackBy: trackUserById">{{userOption.login}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                        <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Hủy</span>
+                    </button>
+                    <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving || (amount && transaction.amount > amount) || (transaction.amount && transaction.amount % 1000 !== 0)" class="btn btn-primary">
+                        <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Chuyển tiền</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<section class="container-fluid" id="formw4" *ngIf="isRegister">
+    <div class="row">
+        <div class="card col-md-4 offset-4">
+            <div class="card-body">
+                <div class="main-otp">
+                    <h3 >Nhập mã xác nhận bảo mật 2 lớp</h3>
+                    <p><span>Bạn chưa tạo bảo mật 2 lớp? Hãy tạo </span><a routerLink="/authentication">tại đây</a> để bảo vệ tài khoản của mình</p>
+                    <div class="input-wrap">
+                        <input type="text" id="otp" name="otp" class="form-control"
+                               [(ngModel)]="transaction.otp">
+                        <button type="submit" [disabled]="!transaction.otp" class="btn btn-success m-t-10" (click)="save()">Xác nhận chuyển tiền</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<swal #errorSwal
+      title="Có lỗi sảy ra"
+      type="error"
+      [showConfirmButton]="false"
+      [showCancelButton]="true">
+    <div *swalPartial class="alert alert-info">
+        <strong>{{ errorMessage }}</strong>
+    </div>
+</swal>
+
+<swal #success
+      title="Chúc mừng bạn"
+      text="Tiền đã được chuyển thành công tới đại lý của bạn"
+      type="success"
+      [showConfirmButton]="false"
+      [showCancelButton]="true"
+      cancelButtonText="Đóng"
+      (cancel)="previousState()">
+</swal>

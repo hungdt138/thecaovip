@@ -1,0 +1,36 @@
+{
+    "cicbApp": {
+        "loanDemand": {
+            "home": {
+                "title": "Nhu cầu vay đăng ký theo gói vay",
+                "titleAds": "Danh sách nhu cầu vay đăng ký theo thông tin quảng cáo",
+                "titleList": "Danh sách nhu cầu tư vấn nhanh"
+            },
+            "stt": "STT",
+            "fromDate": "Từ ngày",
+            "toDate": "Đến ngày",
+            "bank": "TCTD",
+            "bank.parent": "Tổ chức tín dụng",
+            "bank.child": "Chi nhánh",
+            "order": "STT",
+            "totalNumber": "Tổng số",
+            "fullName": "Họ tên",
+            "phoneNumber": "Số điện thoại",
+            "advertisement": "Quảng cáo",
+            "totalCount": "Tổng số: {{param}}",
+            "demandDay": "Ngày nhu cầu",
+            "action": "Thao tác",
+            "demand": {
+                "title": "Nhu cầu",
+                "loan": "Vay tín dụng",
+                "openCard": "Mở thẻ"
+            },
+            "feedback": "Thông tin phản hồi",
+            "status": {
+                "title": "Trạng thái",
+                "watched": "Đã xem",
+                "notSeen": "Chưa xem"
+            }
+        }
+    }
+}

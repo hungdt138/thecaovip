@@ -1,0 +1,38 @@
+
+{
+    "cicbApp": {
+        "groups" : {
+            "home": {
+                "title": "Danh sách nhóm",
+                "createLabel": "Thêm mới một Nhóm",
+                "createOrEditLabel": "Tạo mới nhóm quyền"
+            },
+            "created": "Thêm mới nhóm {{ param }} thành công",
+            "updated": "Cập nhật nhóm {{ param }} thành công",
+            "deleted": "Xóa nhóm {{ param }} thành công",
+            "delete": {
+                "question": "Bạn có chắc là muốn xóa Nhóm {{ id }}?"
+            },
+            "kickoutUser": {
+                "question": "Bạn có chắc chắn muốn xóa User vói định danh {{ id }} trong nhóm này?"
+            },
+            "detail": {
+                "title": "Nhóm"
+            },
+            "name": "Tên nhóm",
+            "type": "Kiểu nhóm",
+            "status": "Trạng thái",
+            "code": "Mã nhóm",
+            "error": {
+                "deleteError01": "Nhóm quyền đang được sử dụng, không thể xóa"
+            },
+            "addUser": "Thêm người dùng",
+            "userTabTitle": "Người dùng trong nhóm",
+            "role": "Vai trò",
+            "stt": "STT",
+            "groupDetail": "Danh sách chi tiết",
+            "description": "Mô tả",
+            "noUser": "Nhóm này chưa có người dùng nào"
+        }
+    }
+}

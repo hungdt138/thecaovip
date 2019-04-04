@@ -1,0 +1,57 @@
+{
+    "cicbApp": {
+        "creditOfficer" : {
+            "home": {
+                "title": "Credit Officers",
+                "createLabel": "Create a new Credit Officer",
+                "createOrEditLabel": "Create or edit a Credit Officer"
+            },
+            "created": "A new Credit Officer is created with identifier {{ param }}",
+            "updated": "A Credit Officer is updated with identifier {{ param }}",
+            "deleted": "A Credit Officer is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Credit Officer {{ id }}?"
+            },
+            "detail": {
+                "title": "Credit Officer"
+            },
+            "phoneNumber": "Phone Number",
+            "gender": "Gender",
+            "fullName": "Full Name",
+            "status": "Status",
+            "bank": "Bank",
+            "female": "Female",
+            "male": "Male",
+            "error": {
+                "deleteError01": "Không xóa được Cán bộ tín dụng vì đã được sử dụng bởi Ghép cặp(Pairing)",
+                "activeError01": "Kích hoạt trạng thái hoạt động lỗi",
+                "activeError02": "Kích hoạt trạng thái không hoạt động lỗi"
+            },
+            "search": "Search"
+        },
+        "specialistConsultant":{
+            "criteria": "Criteria",
+            "refresh": "Refresh",
+            "consultingService": "Consulting Service",
+            "creditCard": "Credit Card",
+            "debitCard": "Debit Card",
+            "unsecuredLoan": "Unsecured Loans",
+            "mortgageLoan": "Mortgage Loan",
+            "otherService": "Other Service",
+            "area": "Area",
+            "creditInstitutions": "Credit Institutions",
+            "enterBankName": "Enter the bank name, credit fund",
+            "infoCreditOfficers": "INFORMATION OF CREDIT SPECIALISTS",
+            "chatNow": "Chat now",
+            "position": "Position",
+            "fields": "Fields",
+            "seeMore":"See More",
+            "distance":"Distance",
+            "employees":"Employees",
+            "headOfDepartment":"Head Of Department",
+            "consultingSubjects":"Consulting subjects",
+            "personal":"Personal",
+            "company":"Company"
+        }
+    }
+}

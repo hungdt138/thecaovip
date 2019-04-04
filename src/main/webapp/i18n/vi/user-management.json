@@ -1,0 +1,68 @@
+{
+    "userManagement": {
+        "home": {
+            "title": "Tài khoản",
+            "createLabel": "Tạo tài khoản mới",
+            "createOrEditLabel": "Tạo hoặc sửa tài khoản"
+        },
+        "created": "Một tài khoản mới đã được tạo với định danh {{ param }}",
+        "updated": "Một tài khoản đã được cập nhật với định danh {{ param }}",
+        "deleted": "Một tài khoản đã bị xóa với định danh {{ param }}",
+        "delete": {
+            "question": "Bạn có chắc chắn muốn xóa tài khoản {{ login }}?"
+        },
+        "detail": {
+            "title": "Tài khoản"
+        },
+        "login": "Tên đăng nhập",
+        "firstName": "Tên",
+        "lastName": "Họ",
+        "email": "Email",
+        "activated": "Kích hoạt",
+        "deactivated": "Khóa",
+        "profiles": "Các quyền",
+        "langKey": "Ngôn ngữ",
+        "createdBy": "Người tạo",
+        "createdDate": "Ngày tạo",
+        "lastModifiedBy": "Người sửa",
+        "lastModifiedDate": "Ngày sửa",
+        "authorization": {
+            "title": "Phân Quyền Người Dùng"
+        },
+        "status.active": "Hoạt động",
+        "status.deactive": "Ngừng hoạt động",
+        "status": "Trạng thái",
+        "title2": "Danh sách nhân viên",
+        "fullName": "Họ tên",
+        "phoneNumber": "Số điện thoại",
+        "group": "Vai trò",
+        "grantAuth": "Phân quyền",
+        "resetPass": "Đặt lại mật khẩu",
+        "newPassword": "mật khẩu",
+        "confirmPassword": "Xác nhận mật khẩu",
+        "reset": "Đặt lại",
+        "error": {
+            "doNotMatch": "Hai mật khẩu không khớp nhau"
+        },
+        "success": "Đặt lại mật khẩu thành công",
+        "activated.active": "Kích hoạt người dùng thành công",
+        "activated.deactive": "Khóa người dùng thành công",
+        "groupAuth.title": "Danh sách nhóm quyền",
+        "groupAuth.name": "Tên vai trò",
+        "groupAuth.description": "Mô tả",
+        "groupAuth.list": "Danh mục chức năng",
+        "groupAuth.add": "Thêm nhóm quyền",
+        "groupAuth.create.title": "Cập nhật nhóm quyền",
+        "groupAuth.success": "Cập nhật nhóm quyền thành công",
+        "groupAuth.manager": "Quản trị hệ thống",
+        "groupAuth.list.title": "Chọn menu truy cập cho vai trò",
+        "groupAuth.checkAll": "Chọn tất cả",
+        "groupAuth.update.success": "Cập nhật nhóm quyền thành công",
+        "groupAuth.list.title2": "Cập nhật quyền cho nhóm vai trò",
+        "groupUser": "Cập nhật nhóm quyền",
+        "groupUser.success": "Cập nhật nhóm quyền thành công",
+        "kickout": "Xóa khỏi nhóm",
+        "kickout.succes": "Xóa người dùng khỏi nhóm thành công",
+        "kickout.failure": "Có lỗi xảy ra, không thể xóa người dùng này"
+    }
+}

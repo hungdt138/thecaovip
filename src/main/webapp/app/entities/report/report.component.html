@@ -1,0 +1,69 @@
+<div class="card">
+    <div class="card-header">
+        <h2>
+            <span>Xuất báo cáo</span>
+        </h2>
+    </div>
+    <div class="card-body row">
+        <div class="col-md-3" *ngIf="currentAccount?.authorities.includes('ROLE_ADMIN')">
+            <label for="user">Tài khoản</label>
+            <input type="text" name="user" id="user" [(ngModel)]="user" class="form-control">
+        </div>
+        <div class="col-md-3 form-group">
+            <label>Từ ngày - Đến ngày</label>
+            <div class="input-group">
+                <input class="form-control" placeholder="dd/MM/yyyy"
+                       name="fromDate" [(ngModel)]="fromDate" ngbDatepicker #t="ngbDatepicker">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" (click)="t.toggle()" type="button">
+                        <fa-icon [icon]="'calendar-alt'"></fa-icon>
+                    </button>
+                </div>
+                <input class="form-control" placeholder="dd/MM/yyyy"
+                       name="toDate" [(ngModel)]="toDate" ngbDatepicker #d="ngbDatepicker">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button">
+                        <fa-icon [icon]="'calendar-alt'"></fa-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <label>&nbsp;</label>
+            <div>
+                <button type="button" class="btn btn-success" (click)="loadAll()">Tạo báo cáo</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card m-t-20">
+    <div class="card-header">
+        <h2 id="page-heading">
+            <span>Báo cáo dư nợ</span>
+        </h2>
+    </div>
+    <div *ngIf="reports">
+        <table class="table">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th><span>Tổng nạp thực tế</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th><span>Tổng đã nạp</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th><span>Trả tước</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th><span>Trả sau</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    {{reports.realAmount | pointReplacer}}
+                </td>
+                <td>
+                    {{reports.chargedAmount | pointReplacer}}
+                </td>
+                <td>{{(reports.prePay | pointReplacer)}}</td>
+                <td>{{(reports.afterPay | pointReplacer)}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

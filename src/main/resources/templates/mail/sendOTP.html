@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{email.otp.title}">JHipster send otp to customer</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="shortcut icon" th:href="@{|${baseUrl}/favicon.ico|}" />
+    </head>
+    <body>
+        <p th:text="#{email.otp.customer}">
+            Dear
+        </p>
+        <p>
+            <span th:text="#{email.otp.content(${otp.getCode()})}"></span>
+            <br/>
+            <span th:text="#{email.otp.thank}"></span>
+        </p>
+        <p th:text="#{email.contact}">
+            Password
+        </p>
+        <p th:text="#{email.content.caution}" style="color: red">
+            This is automatic mail.
+        </p>
+        <p>
+            <span th:text="#{email.reset.text2}">Regards, </span>
+            <br/>
+            <em th:text="#{email.signature}">JHipster.</em>
+        </p>
+    </body>
+</html>

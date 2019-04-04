@@ -1,0 +1,27 @@
+
+{
+    "cicbApp": {
+        "demandResponse" : {
+            "home": {
+                "title": "Quản lý nhu cầu vay",
+                "createLabel": "Thêm mới một Demand Response",
+                "createOrEditLabel": "Thêm mới hoặc cập nhật Demand Response"
+            },
+            "created": "Một Demand Response mới được tạo với định danh {{ param }}",
+            "updated": "Một Demand Response cập nhật với định danh {{ param }}",
+            "deleted": "Một Demand Response đã xóa với định danh {{ param }}",
+            "delete": {
+                "question": "Bạn có chắc là muốn xóa Demand Response {{ id }}?"
+            },
+            "detail": {
+                "title": "Quản lý nhu cầu vay"
+            },
+            "content": "Thông Tin Phản Hồi",
+            "type": "Nhu cầu",
+            "user": "User",
+            "createdDate": "Ngày Nhu Cầu",
+            "demand": "Nhu cầu",
+            "responseNotFound": "Không có phản hồi nào"
+        }
+    }
+}

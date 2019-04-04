@@ -1,0 +1,42 @@
+{
+    "cicbApp": {
+        "adminHome" : {
+            "analyze": "Phân tích",
+            "type": "Đối tượng",
+            "year": "Năm",
+            "fromMonth": "Từ tháng",
+            "toMonth": "Đến tháng",
+            "type.3": "Khách hàng thể nhân",
+            "type.4": "Khách hàng pháp nhân",
+            "month": {
+                "title": "Tháng",
+                "01": "Tháng 01",
+                "02": "Tháng 02",
+                "03": "Tháng 03",
+                "04": "Tháng 04",
+                "05": "Tháng 05",
+                "06": "Tháng 06",
+                "07": "Tháng 07",
+                "08": "Tháng 08",
+                "09": "Tháng 09",
+                "10": "Tháng 10",
+                "11": "Tháng 11",
+                "12": "Tháng 12"
+            },
+            "title": {
+                "chart1": "Nhu cầu vay vốn {{type}} từ tháng {{fromMonth}} đến tháng {{toMonth}} năm {{year}}",
+                "chart2": "Nhu cầu vay từ tháng {{fromMonth}} đến tháng {{toMonth}}",
+                "chart3": "Nhu cầu mở thẻ {{type}} từ tháng {{fromMonth}} đến tháng {{toMonth}} năm {{year}}",
+                "chart4": "Nhu cầu mở thẻ từ tháng {{fromMonth}} đến tháng {{toMonth}}",
+                "chart5": "Nhu cầu tín dụng được đáp ứng từ tháng {{fromMonth}} đến tháng {{toMonth}}"
+            },
+            "error": {
+                "monthError": "Từ tháng đến tháng không hợp lệ"
+            },
+            "loanDemandWaiting": "Nhu cầu vay chờ kết nối",
+            "loanDemandConnected": "Nhu cầu vay đã kết nối",
+            "openCardCredit": "Thẻ tín dụng",
+            "openCardDebit": "Thẻ ghi nợ"
+        }
+    }
+}

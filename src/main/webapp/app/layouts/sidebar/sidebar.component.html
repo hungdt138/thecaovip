@@ -1,0 +1,102 @@
+<nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
+    <div class="container-fluid">
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Brand -->
+        <a class="navbar-brand pt-0">
+            <img src="../../../content/images/hg/thecaovip.png" class="navbar-brand-img" alt="...">
+        </a>
+        <!-- Collapse -->
+        <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+            <!-- Collapse header -->
+            <div class="navbar-collapse-header d-md-none">
+                <div class="row">
+                    <div class="col-6 collapse-brand">
+                        <a>
+                            <img src="../../../content/images/logo-jhipster.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-6 collapse-close">
+                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle sidenav">
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Form -->
+            <form class="mt-4 mb-3 d-md-none">
+                <div class="input-group input-group-rounded input-group-merge">
+                    <input type="search" class="form-control form-control-rounded form-control-prepended" placeholder="Search" aria-label="Search">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <span class="fa fa-search"></span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <!-- Navigation -->
+            <ul class="navbar-nav">
+                <li class="nav-item" *hgHasAnyAuthority="'ROLE_USER'" routerLinkActive="active">
+                    <a class="nav-link" routerLink="/bill/one">
+                        <i class="fas fa-fighter-jet" style="color: #ea4335;"></i> Tạo nhanh đơn hàng
+                    </a>
+                </li>
+                <li class="nav-item" *hgHasAnyAuthority="'ROLE_USER'" routerLinkActive="active">
+                    <a class="nav-link" routerLink="/bill">
+                        <fa-icon icon="list" style="color: blueviolet;"></fa-icon> Danh sách đơn hàng
+                    </a>
+                </li>
+                <!--<li class="nav-item" *hgHasAnyAuthority="'ROLE_USER'">-->
+                    <!--<a class="nav-link" routerLink="/bill/new">-->
+                        <!--<i class="fa fa-cart-plus" style="color: #3b5998;"></i> Tạo nhiều đơn hàng-->
+                    <!--</a>-->
+                <!--</li>-->
+                <!--<li class="nav-item" *hgHasAnyAuthority="'ROLE_USER'" routerLinkActive="active">-->
+                    <!--<a class="nav-link" routerLink="/bill/import-new">-->
+                        <!--<i class="fas fa-file-excel"style="color: green"></i> Import đơn hàng-->
+                    <!--</a>-->
+                <!--</li>-->
+                <li class="nav-item" *hgHasAnyAuthority="'ROLE_USER'" routerLinkActive="active">
+                    <a class="nav-link" routerLink="/create-account">
+                        <fa-icon icon="list" style="color: #5e72e4"></fa-icon> Danh sách đại lý
+                    </a>
+                </li>
+                <li class="nav-item" *hgHasAnyAuthority="'ROLE_USER'" routerLinkActive="active">
+                    <a class="nav-link" routerLink="/transaction">
+                        <i class="fas fa-history" style="color: orangered"></i> Lịch sử giao dịch
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="demand-charge/all" routerLinkActive="active">
+                        <fa-icon icon="list" class="p-r-10"></fa-icon> Thẻ đã nhận
+                    </a>
+                </li>
+            </ul>
+            <!-- Divider -->
+            <hr class="my-3" *hgHasAnyAuthority="'ROLE_ADMIN'">
+            <!-- Heading -->
+            <h6 class="navbar-heading text-muted" *hgHasAnyAuthority="'ROLE_ADMIN'">Quản trị admin</h6>
+            <!-- Navigation -->
+            <ul class="navbar-nav mb-md-3" *hgHasAnyAuthority="'ROLE_ADMIN'">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="admin/system/new" routerLinkActive="active">
+                        <fa-icon icon="home" class="p-r-10"></fa-icon> Cài đặt hệ thống
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="demand-charge" routerLinkActive="active">
+                        <fa-icon icon="list" class="p-r-10"></fa-icon> Thẻ nạp lỗi
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="demand-charge/hand" routerLinkActive="active">
+                        <fa-icon icon="list" class="p-r-10"></fa-icon> Thẻ Vina nạp tay
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

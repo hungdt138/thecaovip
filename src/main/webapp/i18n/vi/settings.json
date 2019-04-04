@@ -1,0 +1,143 @@
+{
+    "settings": {
+        "title": "Cập nhật thông tin tài khoản",
+        "form": {
+            "firstname": "Tên",
+            "firstname.placeholder": "Nhập tên của bạn",
+            "lastname": "Họ",
+            "lastname.placeholder": "Nhập họ của bạn",
+            "language": "Ngôn ngữ",
+            "button": "Lưu",
+            "fullName": "Họ tên",
+            "fullName.placeholder": "Điền họ tên của bạn",
+            "phoneNumber": "Số điện thoại",
+            "phoneNumber.placeholder": "Điền số điện thoại của bạn",
+            "identification": "Chứng minh thư",
+            "identification.placeholder": "Điền chứng minh thư của bạn",
+            "confirmOtp": "Xác nhận mã OTP",
+            "dateOfBirth": "Ngày sinh",
+            "gender": "Giới tính",
+            "province": "Tỉnh/ Thành phố",
+            "district": "Quận/ Huyện",
+            "commune": "Phường / Xã",
+            "male": "Nam",
+            "feMale": "Nữ",
+            "otpCode.placeholder": "Nhập mã OTP",
+            "certificateNumber": "Tên chủ thể chứng thư số",
+            "serial": "Serial chứng thư",
+            "validityTime": "Thời hạn sử dụng chứng thư số",
+            "fromDate": "Từ ngày",
+            "toDate": "Đến ngày",
+            "taxCode": "Mã số doanh nghiệp",
+            "contact.name": "Người liên hệ",
+            "contact.phoneNumber": "SĐT liên hệ"
+        },
+        "messages": {
+            "error": {
+                "fail": "<strong>Có lỗi xảy ra!</strong> Không thể lưu cài đặt.",
+                "emailExist": "Email đã được sử dụng! Vui lòng nhập email khác.",
+                "otp": "Mã otp không chính xác",
+                "userNotFound": "Không tìm thấy thông tin tài khoản",
+                "otpCodeNull": "Vui lòng nhập mã OTP",
+                "otpNotFound": "Mã OTP không tồn tại",
+                "otpTimeOut": "Mã OTP không còn hiệu lực",
+                "systemError": "Không cập nhật được thông tin tài khoản",
+                "customerNotFound": "Không tìm thấy thông tin khách hàng",
+                "toDateInvalid": "Đến ngày nhỏ hơn từ ngày"
+            },
+            "success": "Thay đổi thông tin cá nhân thành công",
+            "validate": {
+                "firstname": {
+                    "required": "Bạn phải nhập tên.",
+                    "minlength": "Tên phải có ít nhất 1 ký tự",
+                    "maxlength": "Tên không được vượt quá 50 ký tự"
+                },
+                "lastname": {
+                    "required": "Bạn phải nhập họ tên.",
+                    "minlength": "Họ tên phải có ít nhất 1 ký tự",
+                    "maxlength": "Họ tên không được vượt quá 50 ký tự"
+                },
+                "phoneNumber": {
+                    "required": "Bạn phải nhập số điện thoại.",
+                    "minlength": "Số điện thoại phải có ít nhất 8 ký tự",
+                    "maxlength": "Số điện thoại không được vượt quá 12 ký tự",
+                    "pattern": "Số điện thoại không đúng"
+                },
+                "identification": {
+                    "required": "Bạn phải nhập chứng minh thư.",
+                    "minlength": "Chứng minh thư phải có ít nhất 9 ký tự",
+                    "maxlength": "Chứng minh thư không được vượt quá 12 ký tự",
+                    "pattern": "Chứng minh thư có thể chứa các ký tự số"
+                },
+                "dateOfBirth": {
+                    "pattern": "Định dạng ngày sinh không đúng"
+                },
+                "idDate": {
+                    "pattern": "Định dạng ngày không đúng"
+                },
+                "otpCode": {
+                    "required": "Bạn phải nhập mã OTP",
+                    "pattern": "Mã OTP không đúng đinh dạng"
+                },
+                "taxCode": {
+                    "maxlength": "Mã số doanh nghiệp không được vượt quá 15 ký tự"
+                },
+                "serial": {
+                    "maxlength": "Serial chứng thư không được vượt quá 32 ký tự"
+                },
+                "certificateNumber": {
+                    "required": "Bạn phải nhập tên chủ thể chứng thư số",
+                    "maxlength": "Tên chủ thể chứng thư số không được vượt quá 100 ký tự"
+                },
+                "contactnameInput": {
+                    "required": "Bạn phải nhập người liên hệ",
+                    "maxlength": "Người liên hệ không được vượt quá 100 ký tự"
+                }
+            }
+        },
+        "otp": {
+            "success": "Mã OTP đã gửi số điện thoại của bạn"
+        },
+        "co": {
+            "title1": "1. Thông tin cá nhân",
+            "title2": "2. Chọn lĩnh vực bạn muốn tư vấn",
+            "title3": "3. Vị trí của bạn",
+            "customer": "Khách hàng cá nhân",
+            "enterprise": "Khách hàng doanh nghiệp",
+            "debit": "Thẻ ghi nợ",
+            "credit": "Thẻ tín dụng",
+            "confirmLocation": "Cập nhật vị trí hiện tại",
+            "confirmQuestion": "Bạn có muốn cập nhật vị trí hiện tại làm vị trí mới của mình?"
+        },
+        "user": {
+            "userInfo": "Thông tin tài khoản của quý khách",
+            "cicCode": "Mã CIC",
+            "login": "Tên đăng nhập",
+            "cmnd": "CMND",
+            "cmndDate": "Ngày cấp",
+            "cmndPlace": "Nơi cấp",
+            "address": "Địa chỉ",
+            "reason": "Lý do cập nhật thông tin",
+            "edit": "Cập nhật thông tin đăng ký",
+            "sendUpdateSuccess": "Thông tin đã được gửi, nhân viên của chúng tôi sẽ duyệt hồ sơ của quý khách trong thời gian sớm nhất",
+            "policy": "cam kết cập nhật thông tin đăng ký",
+            "policy.p1": "1. Tôi đã đọc, hiểu rõ , đồng ý và cam kết tuân thủ các quy định về hoạt động đăng ký tín dụng của Trung tâm tín dụng quốc gia Việt Nam",
+            "policy.p2": "2. Tôi xin cam đoan những thông tin thay đổi là chính xác và xin chịu hoàn toàn trách nhiệm về các thông tin thay đổi.",
+            "policy.p3": "3. Tôi đồng ý cho Trung tâm tín dụng Quốc Gia Việt Nam được sử dụng các thông tin đăng ký để phục vụ cho hoạt động cấp tín dụng của các Tổ chức tín dụng..",
+            "policy.checkbox": "Tôi xin chấp nhận điểu khoản cam kết",
+            "serialInfo": "Thông tin chứng thư số",
+            "enterpriseInfo": "Thông tin doanh nghiệp",
+            "contactInfo": "Thông tin người liên hệ",
+            "leaderInfo": "Thông tin lãnh đạo",
+            "enterpriseName": "Tên đơn vị",
+            "enterpriseType": "Loại hình doanh nghiệp",
+            "businessLicenceDate": "Ngày cấp DKKD",
+            "businessLicenceScan": "Bản Scan DKKD",
+            "enterpriseInfo.name": "Người đại diện pháp luật",
+            "enterpriseInfo.position": "Chức vụ",
+            "proveFile": "File chứng minh thay đổi",
+            "authorityScan": "Bản scan ủy quyền người đại diện",
+            "businessLicence": "Bản scan DDKD"
+        }
+    }
+}

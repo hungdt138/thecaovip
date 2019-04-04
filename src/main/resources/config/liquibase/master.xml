@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181024014954_added_entity_Customer.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181024025057_added_entity_Bank.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181024035752_added_entity_CardPack.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181024031430_added_entity_CreditOfficer.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181024041322_added_entity_Demand.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181024041859_added_entity_Groups.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181024043637_added_entity_GroupAuth.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181024042407_added_entity_LoanPack.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181024043142_added_entity_LoanPackDtl.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181024034351_added_entity_Pairing.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181106042007_added_entity_Area.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181109022103_added_entity_Advertisement.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181117040851_added_entity_Report.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181119023914_added_entity_DemandResponse.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181120043349_added_entity_Otp.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181204075905_added_entity_InterestRate.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181205035948_added_entity_CustomerResponse.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181228041858_added_entity_Order.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190221073706_added_entity_Collateral.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20181024035752_added_entity_constraints_CardPack.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181024031430_added_entity_constraints_CreditOfficer.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181024043637_added_entity_constraints_GroupAuth.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181024043142_added_entity_constraints_LoanPackDtl.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181024034351_added_entity_constraints_Pairing.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181024041322_added_entity_constraints_Demand.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181109022103_added_entity_constraints_Advertisement.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181119023914_added_entity_constraints_DemandResponse.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
+</databaseChangeLog>

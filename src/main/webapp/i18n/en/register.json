@@ -1,0 +1,206 @@
+{
+    "register": {
+        "title": "Registration",
+        "titleEnterprise": "Đăng ký tài khoản doanh nghiệp",
+        "form": {
+            "button": {
+                "register": "Register",
+                "close": "Close"
+            },
+            "confirm": "Confirm"
+        },
+        "messages": {
+            "validate": {
+                "login": {
+                    "required": "Your Username is required.",
+                    "minlength": "Your Username is required to be at least 1 character.",
+                    "maxlength": "Your Username cannot be longer than 50 characters.",
+                    "pattern": "Your Username must contain a number and an lowercase letter"
+                },
+                "fullName": {
+                    "required": "Your username is required.",
+                    "minlength": " Your username is required to be at least 1 character.",
+                    "maxlength": " Your username cannot be longer than 50 characters."
+                },
+                "serialOwner": {
+                    "required": "This field is required.",
+                    "minlength": "This field is required to be at least 1 character.",
+                    "maxlength": "This field cannot be longer than 50 characters."
+                },
+                "phoneNumber": {
+                    "required": "This field is required.",
+                    "minlength": "Your phone number is required to be at least 9 character.",
+                    "maxlength": "Your phone number cannot be longer than 11 characters.",
+                    "pattern": "Your phone number required numbers from 0 to 9."
+                },
+                "contact": {
+                    "required": "This field is required.",
+                    "minlength": "This field is required to be at least 1 character.",
+                    "maxlength": "This field cannot be longer than 50 characters."
+                },
+                "serial": {
+                    "required": "This field is required.",
+                    "minlength": "This field is required to be at least 9 character.",
+                    "maxlength": "This field cannot be longer than 12 characters."
+                },
+                "taxcode": {
+                    "required": "Bạn phải nhập dòng này",
+                    "minlength": "Bạn cần nhập có ít nhất 10 ký tự.",
+                    "success": "Lấy thông tin thành công",
+                    "error01": "Mã số doanh nghiệp không hợp lệ đề nghị khách hàng kiểm tra lại",
+                    "error02": "Không thể kết nối đến trang thuế"
+                },
+                "nameCompany":{
+                    "required": "This field is required."
+                },
+                "enttype":{
+                    "required": "This field is required."
+                },
+                "representative":{
+                    "required": "This field is required."
+                },
+                "position":{
+                    "required": "This field is required."
+                },
+                "address":{
+                    "required": "This field is required."
+                }
+            },
+            "success": "<strong>Registration Successfully!</strong> A One Time Passcode will be sent to you shortly .",
+            "error": {
+                "fail": "Registration Failed!",
+                "userexists": "This username has already taken !1",
+                "emailexists": "This email has already taken!",
+                "otpfailed": "Failed to register OTP",
+                "dateinvalid": "Your registration date is invalid!",
+                "serialinvalid": "Your serial is invalid!",
+                "serialownerinvalid": "Your serial owner is invalid!",
+                "contactinvalid": "Your contact name is invalid!",
+                "phonenumberinvalid": "Your phone number is invalid!",
+                "taxcodeinvalid": "Your tax code is invalid!",
+                "customerexists": "Your information already used!",
+                "loginInvalid": "Tên tài khoản không hợp lệ!",
+                "fullNameInvalid": "Họ tên không hợp lệ!",
+                "dateOfBirthInvalid": "Ngày sinh không hợp lệ!",
+                "identificationInvalid": "Số chứng minh nhân dân không hợp lệ!",
+                "imageInvalid": "Ảnh không hợp lệ!",
+                "addressInvalid": "Địa chỉ không hợp lệ!",
+                "provinceInvalid": "Tỉnh/Thành phố không hợp lệ!",
+                "districtInvalid": "Quận/Huyện không hợp lệ!",
+                "communeInvalid": "Xã/Phường không hợp lệ!",
+                "serialOwnerInvalid": "Tên chủ chứng thư số không hợp lệ!",
+                "serialInvalid": "Số chứng thư không hợp lệ!",
+                "fromDateInvalid": "Thời gian từ ngày không hợp lệ!",
+                "toDateInvalid": "Thời gian đến ngày không hợp lệ!",
+                "compareDateInvalid": "Thời gian từ ngày không được lớn hơn thời gian đến ngày!",
+                "taxCodeInvalid": "Mã số doanh nghiệp không hợp lệ!",
+                "companyNameInvalid": "Tên vị không hợp lệ!",
+                "entTypeInvalid": "Loại hình doanh nghiệp không hợp lệ!",
+                "contactNameInvalid": "Tên người liên hệ không hợp lệ!",
+                "representativeInvalid": "Tên người đại diện pháp luật không hợp lệ!",
+                "positionInvalid": "Chức vụ người đại diên pháp luật không hợp lệ!",
+                "imageDkkdInvalid": "Bản scan đăng ký kinh doanh không hợp lệ!",
+                "git imageAuthorityInvalid": "Bản scan ủy quyền người đại diện không hợp lệ!",
+                "invalidTaxCode": "Mã số doanh nghiệp không khớp mã số kê khai trên tổng cục thuế!",
+                "accountActivated": "Số điện thoại đã được đăng ký tài khoản đề nghị quý khách kiểm tra lại!",
+                "accountLock": "Tài khoản đã bị khóa đề nghị khách hàng kiểm tra lại!",
+                "provinceError": "Tỉnh/Thành phố không hợp lệ!",
+                "districtError": "Quận/Huyện không hợp lệ!",
+                "communeError": "Xã phường không hợp lệ!",
+                "imageNull": "Ảnh không hợp lệ!",
+                "invalidOtp": "Mã Otp không hợp lệ!",
+                "dateOfBirthInvalidMin": "Tuổi không được nhỏ hơn 18",
+                "dateOfBirthInvalidMax": "Tuổi không được lơn hơn 65",
+                "invalidAge": "Tuổi phải lớn hơn bằng 18 và bé hơn bằng 65",
+                "unknownError": "Có lỗi xảy ra",
+                "http.500": "Có lỗi xảy ra",
+                "idDateInvalid": "Ngày cấp CMND/CCCD không hợp lệ",
+                "fileTooLarge": "Dung lượng ảnh vượt quá mức cho phép"
+            }
+        },
+        "otp": "A One Time Passcode has been sent to your phone",
+        "confirm.title": "Please enter the OTP",
+        "confirm.success": "OTP verified successfully!",
+        "confirm.error": "Invalid OTP.Please try again!",
+        "registered.title": "Registration",
+        "registered.success": "Registration successfully",
+        "registered.phoneNumberError": "This phone number has been registered",
+        "registered.passwordError": "The Confirm Password confirmation does not match",
+        "registered.dateError": "Your registration date is not valid",
+        "registered.error": "Registration failed ! Your information is invalid",
+        "registered.otp.success": "Mã OTP đã được gửi đến điện thoại của bạn",
+        "registered.otp.error": "Gửi mã OTP thất bại đề nghị bạn kiểm tra lại!",
+        "object": {
+            "title": "Object",
+            "personal": "Personal",
+            "enterprise": "Enterprise"
+        },
+        "serialOwner": "Serial Owner",
+        "serial": "Serial Card",
+        "validity": {
+            "title": "Validity",
+            "registrationDate": "From",
+            "expirationDate": "To"
+        },
+        "taxNumber": "Tax Identification Number",
+        "contact": "Contact",
+        "contactNumber": "Contact Number",
+        "loanProfile": {
+            "sendOtp": {
+                "success": "A One Time Passcode will be sent to you shortly .",
+                "error": "Failed to send OTP!!"
+            },
+            "checkOtp": {
+                "success": "OTP verified successfully!",
+                "error": "Failed to verify OTP",
+                "otpNotFound": "Mã OTP không chính xác!",
+                "otpTimeOut": "Mã OTP đã hết hạn!"
+            }
+        },
+        "upload": "Chọn",
+        "taxCode": "Tax code",
+        "cert": {
+            "error": {
+                "title": "Chữ ký số",
+                "userCancel": "Bạn chưa chọn chữ ký số",
+                "invalidArgument": "Có lỗi xảy ra",
+                "technicalError": "Có lỗi xảy ra",
+                "notAllowed": "Có lỗi xảy ra",
+                "invalidDate": "Chữ ký số đã hết hạn sử dụng"
+            }
+        },
+        "contactInfo": "Thông tin người liên hệ",
+        "unit": "Tên đơn vị",
+        "enterpriseType": {
+            "title": "Loại hình doanh nghiệp",
+            "1": "Công ty TNHH 1 Thành Viên",
+            "2": "Công ty TNHH 2 Thành Viên trở lên",
+            "3": "Công ty Cổ Phần",
+            "4": "Doanh nghiệp tư nhân",
+            "5": "Công ty Hợp Danh"
+        },
+        "enterpriseAddress": "Địa chỉ doanh nghiệp",
+        "dkkdDate": "Ngày cấp DKKD",
+        "peopleLow": "Người đại diện pháp luật",
+        "position": "Chức vụ người DD",
+        "leaderInfo": "Thông tin lãnh đạo",
+        "getInfo": "Lấy thông tin",
+        "imageError": "Bạn chưa chọn đủ ảnh đề nghị chọn thêm ảnh",
+        "registerAccount": "Đăng ký tài khoản",
+        "scanDkkd": "Bản scan DDKD:",
+        "scanAuthority": "Bản scan ủy quyền người đại diện:",
+        "identificationDiff": "Số CMT khác",
+        "creditReport": "Khai thác báo cáo tín dụng",
+        "cmnd": "Ảnh CMT/ CCCD",
+        "chooseFile": "Chọn hình ảnh",
+        "chooseProvince": "Chọn tỉnh/ thành phố",
+        "chooseDistrict": "Chọn quận/ thành huyện",
+        "chooseCommune": "Chọn phường/ thành xã",
+        "phoneWrongFormat": "SĐT không hợp lệ",
+        "idWrongFormat": "CMT/CCCD không hợp lệ",
+        "fax": "Số fax",
+        "invalidFax": "Số fax không hợp lệ!",
+        "imgMaxSize": "Ảnh vượt quá giới hạn 5MB cho phép",
+        "pdfDkkdRequire": "Chưa tải lên giấy phép đăng ký kinh doanh"
+    }
+}

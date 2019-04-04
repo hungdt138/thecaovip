@@ -1,0 +1,102 @@
+{
+    "cicbApp": {
+        "advisory" : {
+            "title": "Thông tin liên hệ tư vấn",
+            "subtitle": "Hãy điền đầy đủ thông tin liên hệ để chúng tôi có thể liên lạc tư vẫn cho bạn 1 cách nhanh chóng nhất",
+            "subtitle2": "Hãy nhập mã otp đã được gửi tới số điện thoại đăng ký để xác nhận thông tin",
+            "customerType": {
+                "title": "Đối tượng",
+                "customer": "Cá nhân",
+                "enterprise": "Doanh nghiệp"
+            },
+            "fullName": "Họ tên",
+            "phoneNumber": "Số điện thoại",
+            "cmt": "Chứng minh thư",
+            "cmt.placeholder": "Hãy nhập chứng minh thư của bạn",
+            "demandType": {
+                "title": "Nhu cầu",
+                "loan": "Vay vốn",
+                "card": "Mở thẻ"
+            },
+            "otp": "Mã otp",
+            "confirm.title": "Bạn đã đăng ký thành công",
+            "confirm.success": "Tổ chức tín dụng sẽ liên hệ hỗ trợ bạn trong thời gian sớm nhất!",
+            "confirm.error": "Mã OTP không hợp lệ, vui lòng thử lại!",
+            "confirm.error.title": "Đăng ký thất bại",
+            "registered.title": "Đăng ký tư vấn",
+            "registered.success": "Đăng ký tư vấn thành công, mã OTP đã được gửi đến điện thoại của bạn",
+            "registered.error": "Không thể gửi mã OTP đến số điện thoại của bạn",
+            "contactName": "Người liên hệ",
+            "contactName.placeholder": "Nhập tên người liên hệ",
+            "contactPhoneNumber": "Số điện thoại",
+            "contactPhoneNumber.placeholder": "Nhập số điện thoại của người liên hệ",
+            "serialOwner": "Tên chủ thể chứng thu số",
+            "serial": "Số chứng thư",
+            "fromDateToDate": "Thời hạn sử dụng chứng thư",
+            "taxCode": "Mã số doanh nghiệp",
+            "error": {
+                "fullName": "Họ tên không được bỏ trống",
+                "phoneNumber": "SĐT không được bỏ trống",
+                "cmt": "Chứng minh thư không được bỏ trống",
+                "serial": "Chứng thư số không được bỏ trống",
+                "serialOwner": "Chủ chứng thư số được bỏ trống",
+                "contactName": "Người liên hệ không được bỏ trống",
+                "taxCode": "Mã số doanh nghiệp không được bỏ trống",
+                "fromDate": "Ngày bắt đầu chứng thư không được bỏ trống",
+                "toDate": "Ngày kết thúc chứng thu không được bỏ trống",
+                "contactPhoneNumber": "SĐT liên hệ không được bỏ trống",
+                "fail": "Đăng ký thất bại!",
+                "userexists": "Tên tài khoản này đã được sử dụng!",
+                "emailexists": "Email này đã được sử dụng! ",
+                "otpfailed": "Đăng kí OTP thất bại",
+                "dateinvalid": "Ngày đăng kí không hợp lệ",
+                "serialinvalid": "Serial chứng thư không hợp lệ",
+                "serialownerinvalid": "Tên chủ thế chứng thư số không hợp lệ ",
+                "contactinvalid": "Tên người liên hệ không hợp lệ",
+                "phonenumberinvalid": "Số điện thoại đăng kí không hợp lệ",
+                "taxcodeinvalid": "Mã số doanh nghiệp đăng kí không hợp lệ",
+                "customerexists": "Thông tin người dùng đã được đăng kí",
+                "invalidTaxCode": "Mã số doanh nghiệp không khớp mã số kê khai trên tổng cục thuế",
+                "dateOfBirthInvalidMin": "Tuổi phải lớn hơn bằng 18",
+                "dateOfBirthInvalidMax": "Tuổi phải bé hơn bằng 65",
+                "collateral": "Loại tài sản không được bỏ trống",
+                "invalidOtp": "Mã OTP không chính xác",
+                "imageDkkdInvalid": "Bản scan đăng ký kinh doanh không hợp lệ!",
+                "imageAuthorityInvalid": "Bản scan ủy quyền người đại diện không hợp lệ!",
+                "expiredOtp": "Mã OTP đã hết hạn"
+            },
+            "from": "Từ",
+            "to": "Đến",
+            "cert": {
+                "error": {
+                    "title": "Chữ ký số",
+                    "userCancel": "Bạn chưa chọn chữ ký số",
+                    "invalidArgument": "Có lỗi sảy ra",
+                    "technicalError": "Có lỗi sảy ra",
+                    "notAllowed": "Có lỗi sảy ra"
+                }
+            },
+            "income": "Thu nhập bản thân",
+            "isMortgage": "Tài sản thế chấp",
+            "isNotMortgage": "Tín chấp",
+            "entInfo": "Thông tin doanh nghiệp",
+            "signInfo": "Thông tin chứng thư số",
+            "contactInfo": "Thông tin người liên hệ",
+            "dkkdDate": "Ngày cấp đăng kí kinh doanh",
+            "unit": "Tên đơn vị",
+            "enterpriseType": {
+                "title": "Loại hình DN",
+                "1": "Công ty TNHH 1 Thành Viên",
+                "2": "Công ty TNHH 2 Thành Viên trở lên",
+                "3": "Công ty Cổ Phần",
+                "4": "Doanh nghiệp tư nhân",
+                "5": "Công ty Hợp Danh"
+            },
+            "representative": "Người đại diện",
+            "position": "Chức vụ",
+            "scanDkkd": "Bản scan DDKD",
+            "scanAuthority": "Bản scan ủy quyền người đại diện",
+            "fileInfo": "Thông tin File"
+        }
+    }
+}
